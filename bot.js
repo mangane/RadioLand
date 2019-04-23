@@ -9,13 +9,4 @@ client.user.setStatus('idle')
 client.on('ready', () => {
   client.user.setActivity("Maintenance en cours");
   });
-if(message.content.startsWith(prefix + `anim`)) {
-        message.delete()
-        const count = new Discord.RichEmbed()
-        .setColor(0x954D23)
-        .setTitle("**Voici les animations du serveur :**")
-    .addField("Satyre 59");
-        return message.channel.send(count)
-    }
-});
 client.login(process.env.BOT_TOKEN)
