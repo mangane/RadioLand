@@ -9,12 +9,12 @@ client.user.setStatus('idle')
 client.on('ready', () => {
   client.user.setActivity("Maintenance en cours");
   });
-if(message.content.startsWith(prefix + `infoserv`)) {
+if(message.content.startsWith(prefix + `anim`)) {
         message.delete()
         const count = new Discord.RichEmbed()
         .setColor(0x954D23)
-        .setTitle("**Information du serveur **")
-    .addField("Nom du serveur", message.guild.name)
+        .setTitle("**Voici les animations du serveur :**")
+    .addField(":Satyre59: @🔉| Satyre 59 ","-Dimanche 8h30-10h00\n-Vendredi 20h00-22h00-\nSamedi 20h00-21h00"}
         .addField("Date de création du serveur",  message.guild.createdAt)
     .addField("Vous avez rejoint le serveur",  message.member.joinedAt)
         .addField("Total des membres :",  message.guild.memberCount);
