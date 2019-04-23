@@ -9,7 +9,7 @@ client.user.setStatus('idle')
 client.on('ready', () => {
   client.user.setActivity("Maintenance en cours");
   });
-if(message.channel.startsWith(prefix + "test") {
+if(message.channel.startsWith(prefix + "test")) {
     message.reply ("ceci est un  test");
 }
 });
