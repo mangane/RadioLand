@@ -14,7 +14,7 @@ if(message.content.startsWith(prefix + `anim`)) {
         const count = new Discord.RichEmbed()
         .setColor(0x954D23)
         .setTitle("**Voici les animations du serveur :**")
-    .addField(":Satyre59: @🔉| Satyre 59 ","Dimanche 8h30-10h00/Vendredi 20h00-22h00/Samedi 20h00-21h00"};
+    .addField(":Satyre59: Satyre 59 ","Dimanche 8h30-10h00/Vendredi 20h00-22h00/Samedi 20h00-21h00"};
         return message.channel.send(count)
     }
 });
