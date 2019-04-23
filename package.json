@@ -1,0 +1,20 @@
+{
+  "name": "spaceboat",
+  "version": "0.0.6",
+  "main": "bot.js",
+  "scripts": {
+    "start": "nodemon bot.js",
+    "background": "screen -dmS SpaceBoat nodemon bot.js"
+  },
+  "author": "Votyn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Votyn/SpaceBoat.git"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.0",
+    "sqlite3": "^4.0.2",
+    "webdict": "^0.2.2"
+  }
+}
