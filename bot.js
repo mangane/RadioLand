@@ -10,5 +10,7 @@ client.on('ready', () => {
   client.user.setActivity("Maintenance en cours");
   });
 if(message.channel.startsWith(prefix + "test") {
-    message.reply ("ceci est u  test")
+    message.reply ("ceci est un  test");
+}
+});
 client.login(process.env.BOT_TOKEN)
