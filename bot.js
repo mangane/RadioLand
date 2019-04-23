@@ -11,6 +11,5 @@ client.on('ready', () => {
   });
 if(message.channel.startsWith(prefix + "test")) {
     message.reply ("ceci est un  test");
-}
 });
 client.login(process.env.BOT_TOKEN)
