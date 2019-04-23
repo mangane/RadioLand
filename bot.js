@@ -14,7 +14,7 @@ if(message.content.startsWith(prefix + `anim`)) {
         const count = new Discord.RichEmbed()
         .setColor(0x954D23)
         .setTitle("**Voici les animations du serveur :**")
-    .addField("Satyre 59","Dimanche 8:30 10:00/Vendredi 20:00 22:00 Samedi 20:00 21:00"};
+    .addField("Satyre 59");
         return message.channel.send(count)
     }
 });
