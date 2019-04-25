@@ -17,7 +17,6 @@ client.on('guildMemberRemove', member => {
     .setColor("#3ad729")
     .addField("Au revoir", `${member}`)
     .setTitle(":tickets: Une personne est partie, reviendra-t-elle ?:tickets:");
-channel.send(" :bye:")
 	channel.send({embed})
 });
 client.on('guildMemberAdd', member => {
@@ -28,7 +27,6 @@ client.on('guildMemberAdd', member => {
     .setColor("#3ad729")
     .addField("Bienvenue", `${member}`)
     .setTitle(":tickets: Bienvenue sur le serveur :tickets:");
-channel.send(" :bvn:")
 	channel.send({embed})
 });
   client.on(`message`, message =>{
