@@ -10,6 +10,7 @@ client.on('ready', () => {
   client.user.setActivity("Maintenance en cours");
   });
 client.on('guildMemberRemove', member => {
+	message.channel.send(" :bye:")
 	 const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
   if(!channel) return;
     const embed = new Discord.RichEmbed()
@@ -19,6 +20,7 @@ client.on('guildMemberRemove', member => {
 channel.send({embed})
 });
 client.on('guildMemberAdd', member => {
+	message.channel.send(" :bvn:")
   const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
   if (!channel) return;
     const embed = new Discord.RichEmbed()
