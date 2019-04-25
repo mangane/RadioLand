@@ -15,7 +15,7 @@ client.on('ready', () => {
         const embed = new Discord.RichEmbed()
         .setColor("#2e1fe6")
         .setTitle("Voici les animateurs de RadioLand avec leurs horaires :")
-        .addField(" :Satyre59: Satyre59 :","```Dimanche 8h30-10h00\nVendredi 20h00-22h00\n Samedi 20h00-21h00```")
+        .addField("Satyre59 :","```Dimanche 8h30-10h00\nVendredi 20h00-22h00\n Samedi 20h00-21h00```")
         .setFooter("RadioLand");
          message.channel.send({embed})
     }
