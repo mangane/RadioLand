@@ -13,7 +13,7 @@ client.on('ready', () => {
       message.reply("test");
       }
     if(message.content.startsWith(prefix + "allo")) {
-      message.channel.send("hello");
+      message.channel.send("hello")
       }
   });
 client.login(process.env.BOT_TOKEN)
