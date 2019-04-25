@@ -14,7 +14,7 @@ client.on('guildMemberRemove', member => {
   if(!channel) return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .addField(" :Bye: Une personne est partie, reviendra-t-elle ?", member.username})
+    .addField(" :Bye: Une personne est partie, reviendra-t-elle ?", member.username)
     .setFooter("RadioLand Au revoir");
 channel.send({embed})
 });
