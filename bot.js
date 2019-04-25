@@ -8,6 +8,7 @@ client.user.setStatus('idle')
 });
 client.on('ready', () => {
   client.user.setActivity("Maintenance en cours");
+  });
   client.on(`message`, message =>{
     if(message.content.startsWith(prefix + "test")) {
       message.reply("test");
