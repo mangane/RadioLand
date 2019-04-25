@@ -13,7 +13,7 @@ client.on('guildMemberRemove', member => {
 	
 	 const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
   channel.send(" :bye:")
-	(!channel) return;
+	if(!channel) return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
     .addField("Au revoir", `${member}`)
