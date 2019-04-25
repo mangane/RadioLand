@@ -10,7 +10,7 @@ client.on('ready', () => {
   client.user.setActivity("Maintenance en cours");
   });
 client.on('guildMemberRemove', member => {
-	 const channel = member.guild.channels.find(ch => ch.name === '📤départ-arrivé');
+	 const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
   if(!channel) return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
@@ -20,7 +20,7 @@ client.on('guildMemberRemove', member => {
 channel.send({embed})
 });
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(ch => ch.name === '📥départ-arrivé');
+  const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
   if (!channel) return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
