@@ -12,5 +12,8 @@ client.on('ready', () => {
     if(message.content.startsWith(prefix + "test")) {
       message.reply("test");
       }
+    if(message.content.startsWith(prefix + "allo")) {
+      message.channel.send("hello");
+      }
   });
 client.login(process.env.BOT_TOKEN)
