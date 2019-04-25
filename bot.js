@@ -40,6 +40,7 @@ client.on('guildMemberAdd', member => {
         .addField("Le duo : Sαтυиαe et Sophieskyyy :","```-Le Samedi 18h00-19h00\n-Le dimanche 11h00-12h00```")
         .addField ("Mr Chat :","```-Vendredi 22h00-00h00\n-Mercredi 15h30-18h00```")
         .addField ("AshOo :","```-Vendredi : 18h00-19h00\n-Samedi : 19h00-20h00```")
+	.addField("dιoғυɴ","```- Lundi 18h00-22h30\n-Jeudi : 17h00-22h30\n-Dimanche : 15h00-20h00```")
         .setFooter("RadioLand");
          message.channel.send({embed})
     }
