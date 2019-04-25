@@ -25,7 +25,7 @@ client.on('ready', () => {
     }
     if(message.content.startsWith(prefix + "count")) {
       message.delete ()
-      message.reply(`Nous sommes ${guild.memberCount} Sur RadioLand`);
+      message.reply(`Nous sommes ${message.guild.memberCount} Sur RadioLand`);
       }
   });
 client.login(process.env.BOT_TOKEN)
