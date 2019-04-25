@@ -14,7 +14,7 @@ client.on('guildMemberRemove', member => {
   if(!channel) return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .addField(" :Bye: Une personne est partie, reviendra-t-elle ?", member.username)
+    .addField(" :Bye: Une personne est partie, reviendra-t-elle ?", `${member}`)
     .setFooter("RadioLand Au revoir");
 channel.send({embed})
 });
@@ -23,7 +23,7 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .addField(" :Bvn: Bienvenue sur le serveur :", member.username)
+    .addField(" :Bvn: Bienvenue sur le serveur :", `${member}`)
     .addFooter ("RadioLand Bienvenue");
 channel.send({embed})
 });
