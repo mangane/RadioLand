@@ -19,6 +19,7 @@ client.on('ready', () => {
         .addField ("Buxter_YTB :","```-Lundi 8h00-10h00\n-Mardi 17h00-19h00\n-samedi 17h00-18h00\n-Dimanche 13h00-15h00```")
         .addField("Le duo : Sαтυиαe et Sophieskyyy :","```-Le Samedi 18h00-19h00\n-Le dimanche 11h00-12h00```")
         .addField ("Mr Chat :","```-Vendredi 22h00-00h00\n-Mercredi 15h30-18h00```")
+        .addField ("AshOo :","```-Vendredi : 18h00-19h00\n-Samedi : 19h00-20h00```")
         .setFooter("RadioLand");
          message.channel.send({embed})
     }
