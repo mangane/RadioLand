@@ -7,7 +7,7 @@ client.user.setStatus('idle')
   .catch(console.error);
 });
 client.on('ready', () => {
-  client.user.setActivity("Maintenance en cours");
+  client.user.setActivity("Écoute RadioLand");
   });
 client.on('guildMemberRemove', member => {
 	
