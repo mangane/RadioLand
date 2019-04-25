@@ -10,21 +10,21 @@ client.on('ready', () => {
   client.user.setActivity("Maintenance en cours");
   });
 client.on('guildMemberRemove', member => {
-	 const channel = member.guild.channels.find(ch => ch.name === '📤départ');
+	 const channel = member.guild.channels.find(ch => ch.name === '📤départ-arrivé');
   if(!channel) return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .setTitle(":Bye: Une personne est partie, reviendra-t-elle ?")
+    .setTitle(":RadioLand: Une personne est partie, reviendra-t-elle ?")
     .addField("Au revoir", `${member}`)
     .setFooter("RadioLand Au revoir");
 channel.send({embed})
 });
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(ch => ch.name === '📥arrivé');
+  const channel = member.guild.channels.find(ch => ch.name === '📥départ-arrivé');
   if (!channel) return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .setTitle(":Bvn: Bienvenue sur le serveur :")
+    .setTitle(":RadioLand: Bienvenue sur le serveur :")
     .addField("Welcome", `${member}`)
     .addFooter ("RadioLand Bienvenue");
 channel.send({embed})
