@@ -11,5 +11,6 @@ client.on('ready', () => {
   client.on(`message`, message =>{
     if(message.content.startsWith(prefix + "test")) {
       message.reply("test");
+      }
     });
 client.login(process.env.BOT_TOKEN)
