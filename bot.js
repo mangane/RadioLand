@@ -12,24 +12,24 @@ client.on('ready', () => {
 client.on('guildMemberRemove', member => {
 	
 	 const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
-  channel.send(" :bye:")
-	if(!channel) return;
+	if(!channel)return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
     .addField("Au revoir", `${member}`)
     .setTitle(":tickets: Une personne est partie, reviendra-t-elle ?:tickets:");
-channel.send({embed})
+channel.send(" :bye:")
+	channel.send({embed})
 });
 client.on('guildMemberAdd', member => {
 	
   const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
-  channel.send(" :bvn:")
-	if (!channel) return;
+	if (!channel)return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
     .addField("Bienvenue", `${member}`)
     .setTitle(":tickets: Bienvenue sur le serveur :tickets:");
-channel.send({embed})
+channel.send(" :bvn:")
+	channel.send({embed})
 });
   client.on(`message`, message =>{
     if(message.content.startsWith(prefix + "anim")) {
