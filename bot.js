@@ -7,7 +7,7 @@ client.user.setStatus('idle')
   .catch(console.error);
 });
 client.on('ready', () => {
-  client.user.setPresence({ game: { name: `RadioLand`, type: "LISTENING" } });
+  client.user.setPresence({ game: { name: `Dans Ta Pub`, type: "LISTENING" } });
   });
 client.on('guildMemberRemove', member => {
 	
