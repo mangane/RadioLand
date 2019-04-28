@@ -99,11 +99,11 @@ client.on("message", async message => {
 	        message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
 	    }
 
-		if (command === "help")
-message.delete ()
-const help = new Discord.RichEmbed
-.setColor("#2e1fe6")
-.setTitle("Bienvenue dans le menu d'aide")
+		if(command === "help")
+                   message.delete ()
+                    const help = new Discord.RichEmbed
+                     .setColor("#2e1fe6")
+                    .setTitle("Bienvenue dans le menu d'aide")
 .addField("Test");
 message.channel.send({help})
 	}
