@@ -14,7 +14,7 @@ client.on('guildMemberRemove', member => {
 	if(!channel)return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .setFooter(`${member.username}`)
+    .setFooter(`Identifiant :\n${member}`)
     .addField("Au revoir", `${member}`)
     .setTitle(":outbox_tray: Une personne est partie, reviendra-t-elle ?:outbox_tray:");
 	channel.send({embed})
