@@ -25,8 +25,7 @@ client.on('guildMemberAdd', member => {
 	if (!channel)return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .addField("Bienvenue", `${member}`)
-    .setFooter(`${memberCount}`)
+    .addField("Bienvenue", `${member} nous sommes ${message.guild.memberCount}`)
     .setTitle(":inbox_tray: Bienvenue sur le serveur :inbox_tray:");
 	channel.send({embed})
 });
