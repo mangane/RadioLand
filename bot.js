@@ -115,13 +115,12 @@ client.on("message", async message => {
 
 		}
 		var reason = msg;
-		var test = message.guild.channels.find(`name`, "💫pub-vip💫");
+		var test = message.guild.channels.find(`name`, "pub-dans-ta-pub");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("#15f153")
 		.setTitle("Publicité")
 		.addField("Publicité de :", `${message.author}`)
-		.addField("chan :", "💫pub-vip💫")
 		.addField("Publicité :", reason);
 		// envoie au channel courant
 		//message.channel.send({embed})
