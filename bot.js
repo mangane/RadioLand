@@ -118,7 +118,7 @@ client.on("message", async message => {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		let chan = client.channels.find("id", "571919316686077972"); // Find the channel ID "123456789"
+		let chan = client.channels.find("name", "pub-dans-ta-pub"); // Find the channel ID "123456789"
 	    if(chan) { // Check if that channel exists
 	        chan.send({embed});
 	    } else {
