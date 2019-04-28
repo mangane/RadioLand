@@ -37,7 +37,7 @@ client.user.setStatus('idle')
 });
 
 client.on('ready', () => {
-	client.user.setPresence({ game: { name: `Dans Ta Pub`, type: "LISTENING" } });
+	client.user.setPresence({ game: { name: `Dans Ta Pub`, type: "WATCHING" } });
 });
 
 
