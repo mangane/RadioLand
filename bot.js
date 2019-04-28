@@ -126,7 +126,7 @@ client.on("message", async message => {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		let chan = client.channels.find("id", "571904978936135696"); // Find the channel ID "123456789"
+		let chan = client.channels.find("name", "pub-dans-ta-pub"); // Find the channel ID "123456789"
 	    if(chan) { // Check if that channel exists
 	        chan.send({embed});
 	    } else {
@@ -135,37 +135,5 @@ client.on("message", async message => {
 
 		
 	}
-	// fin de l'ajout
-
-	// ton ancien code un peu bordélique
-	/*
-	if(message.content.startsWith(prefix + "count")) {
-		message.delete ()
-		message.reply(`Nous sommes ${message.guild.memberCount} Sur RadioLand`);
-	}
-	if(message.content.startsWith(prefix + "stats")) {
-		message.delete()
-		const embed = new Discord.RichEmbed()
-		.setColor("#2e1fe6")
-		.setTitle("Statistiques")
-		.addField("Nombre de serveur :", client.guilds.size)
-		.addField("Nombre d'utilisateurs :", client.users.size);
-		message.channel.send({embed})
-	}
-	if(message.content.startsWith(prefix + `pub`)) {
-		message.delete()
-	if(message.size === 10)
-		return mesage.channel.send ("Votre publicité doit contenir plus de 10 caractère")
-		let rreason = args.join(" ").slice(28);
-		let reportEmbed = new Discord.RichEmbed()
-		.setDescription("Publicité")
-		.setColor("#15f153")
-		.addField("Publicité de :", `${message.author}`)
-		.addField("Publicité :", rreason);
-		let reportschannel = message.guild.channels.find(`name`, "💫pub-vip💫");
-	if(!reportschannel) return message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
-		reportschannel.send(reportEmbed);
-	}
-	*/
   });
 client.login(process.env.BOT_TOKEN);
