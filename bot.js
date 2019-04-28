@@ -34,6 +34,7 @@ function return_date()
     }
     return dateFr() + ' il est ' + heure();
 }
+});
 client.on('ready', () => {
 client.user.setStatus('idle')
 	.then(console.log)
