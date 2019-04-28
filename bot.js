@@ -1,32 +1,38 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
-function return_date() {
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1;
-    var yyyy = today.getFullYear();
-    var hh = today.getHours();
-    var mn = today.getMinutes();
-    var ss = today.getSeconds();
-    var ms = today.getMilliseconds();
-    if (dd < 10) {
-        dd = '0' + dd;
+function return_date() 
+{
+    function dateFr()
+    {
+         // les noms de jours / mois
+         var jours = new Array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi");
+         var mois = new Array("janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre");
+         // on recupere la date
+         var date = new Date();
+         // on construit le message
+         var message = jours[date.getDay()] + " ";   // nom du jour
+         message += date.getDate() + " ";   // numero du jour
+         message += mois[date.getMonth()] + " ";   // mois
+         message += date.getFullYear();
+         return message;
     }
-    if (mm < 10) {
-        mm = '0' + mm;
+
+    function heure()
+    {
+         var date = new Date();
+         var heure = date.getHours();
+         var minutes = date.getMinutes();
+         var millisec = date.getMilliseconds();
+         if(minutes < 10)
+              minutes = "0" + minutes;
+          if(heure < 10)
+              heure = "0" + heure;
+              // ajout de 2h de décalage
+              heure = Number(heure) + 2;
+         return heure + "h" + minutes + " et " + millisec + " millisecondes";
     }
-    if (hh < 10) {
-        hh = '0' + hh;
-    }
-    if (mn < 10) {
-        mn = '0' + mn;
-    }
-    if (ss < 10) {
-        ss = '0' + ss;
-    }
-    today =  dd + '-' + mm + '-' + yyyy + ' et il est ' + hh + ':' + mm + ':' + ss + ':' + ms;
-    return today;
+    return dateFr() + ' il est ' + heure();
 }
 client.on('ready', () => {
 client.user.setStatus('idle')
