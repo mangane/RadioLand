@@ -86,7 +86,6 @@ client.on("message", async message => {
 		.setColor("#15f153")
 		.setTitle("Publicité")
 		.addField("Publicité de :", `${message.author}`)
-		.addField("chan :", "💫pub-vip💫")
 		.addField("Publicité :", reason);
 		// envoie au channel courant
 		//message.channel.send({embed})
