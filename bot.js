@@ -132,11 +132,11 @@ client.on("message", async message => {
 
 		if(command === "help") {
                     message.delete ()
-                    const help = new Discord.RichEmbed()
+                    const embed = new Discord.RichEmbed()
                     .setColor("#2e1fe6")
                     .setTitle("Bienvenue dans le menu d'aide")
                     .addField("Test");
-                    message.channel.send({help})
+                    message.channel.send({embed})
 	}
   };
 client.login(process.env.BOT_TOKEN);
