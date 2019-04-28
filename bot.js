@@ -48,7 +48,7 @@ client.on('guildMemberAdd', member => {
 		  message.delete()
 		  let ruse = message.mentions.users.first()
 		  const embed = new Discord.RichEmbed ()
-		  .setColor("#2e1fe6")
+		  .setColor("0x954D23")
 		  .setTitle(`information sur un utilisateur du serveur`);
 		  message.channel.send({embed})
 }
