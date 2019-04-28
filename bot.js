@@ -127,8 +127,5 @@ client.on("message", async message => {
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
 	    }
-
-		
-	}
   });
 client.login(process.env.BOT_TOKEN);
