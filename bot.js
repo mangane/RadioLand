@@ -107,13 +107,13 @@ client.on("message", async message => {
 		// Donne le nombre de caractères dans la chaine
 		console.log(msg + ' ' + msg.length);
 		// ici c'est length pas size inférieur ou égal
-		if(msg.length <= 10) {
-			console.log("Votre publicité doit contenir plus de 10 caractère");
-			return message.channel.send ("Votre publicité doit contenir plus de 10 caractère");	
+		if(msg.length <= 30) {
+			console.log("Votre publicité doit contenir plus de 30 caractère");
+			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
 
 		}
 		var reason = msg;
-		var test = message.guild.channels.find(`name`, "pub-dans-ta-pub");
+		var test = message.guild.channels.find(`name`, "💫pub-vip💫");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("#15f153")
@@ -123,10 +123,20 @@ client.on("message", async message => {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
-	        channel.send({embed});
+		let chan = client.channels.find("name", "pub-dans-ta-pub"); // Find the channel ID "123456789"
+	    if(chan) { // Check if that channel exists
+	        chan.send({embed});
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
 	    }
+
+		if(command === "help") {
+                    message.delete ()
+                    const help = new Discord.RichEmbed()
+                    .setColor("#2e1fe6")
+                    .setTitle("Bienvenue dans le menu d'aide")
+                    .addField("Test");
+                    message.channel.send({help})
+	}
   });
 client.login(process.env.BOT_TOKEN);
