@@ -49,7 +49,7 @@ client.on('guildMemberAdd', member => {
 		  let ruse = message.mentions.users.first()
 		  const embed = new Discord.RichEmbed ()
 		  .setColor("#2e1fe6")
-		  .setTitle(`information sur l'utilisateur ${ruse}`);
+		  .setTitle(`information sur un utilisateur du serveur`);
 		  message.channel.send({embed})
 }
   });
