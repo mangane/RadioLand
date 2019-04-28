@@ -37,9 +37,6 @@ function return_date()
 client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub`, type: "WATCHING" } });
 });
-
-
-
 client.on('guildMemberRemove', member => {
 	
 	const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
@@ -110,7 +107,6 @@ client.on("message", async message => {
 		if(msg.length <= 30) {
 			console.log("Votre publicité doit contenir plus de 30 caractère");
 			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
-
 		}
 		var reason = msg;
 		var test = message.guild.channels.find(`name`, "💫pub-vip💫");
@@ -125,7 +121,7 @@ client.on("message", async message => {
 		// envoie au channel distant par l'id
 		let chan = client.channels.find("name", "pub-dans-ta-pub"); // Find the channel ID "123456789"
 	    if(chan) { // Check if that channel exists
-	        chan.send({embed});
+	        chan.send({embed})
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
 	    }
