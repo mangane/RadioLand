@@ -144,7 +144,7 @@ const embed = new Discord.RichEmbed()
 message.channel.send ({embed})
 }
 	if(commmand === "comment") {
-message.channel.send ("Pour utiliser mon service de .pub tu devra tout d'abord créé un salon nommer **dans-ta-pub** ensuite il te suffira de faire la commande sur un salon et tu viens de finir le setup du .pub");
+message.reply("Pour utiliser mon service de .pub tu devra tout d'abord créé un salon nommer **dans-ta-pub** ensuite il te suffira de faire la commande sur un salon et tu viens de finir le setup du .pub");
 }
 	// fin de l'ajout
 
