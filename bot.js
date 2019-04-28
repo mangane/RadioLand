@@ -186,7 +186,8 @@ const embed = new Discord.RichEmbed()
 .setColor ("#15f153")
 .setTitle ("Bienvenue sur l'interface de mes commandes")
 .setDescription("Prefix = .")
-.addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite``");
+.addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite``")
+.addField ("Commande modération :,"``kick\\ban\\purge``");
 message.channel.send ({embed})
 }
 	if(command === "invite") {
