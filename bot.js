@@ -139,7 +139,7 @@ message.delete ()
 const embed = new Discord.RichEmbed()
 .setColor ("#2e1fe6")
 .setTitle ("Bienvenue dans l'interface d'aide")
-.addField(`${message.author.avatarURL}`,`test`);
+.addField(`test`,`${message.author.avatarURL}`);
 message.channel.send ({embed})
 }
 	// fin de l'ajout
