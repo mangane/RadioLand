@@ -101,10 +101,10 @@ client.on("message", async message => {
 
 		if (command === "help")
 message.delete ()
-const embed = new Discord.RichEmbed
+const help = new Discord.RichEmbed
 .setColor("#2e1fe6")
 .setTitle("Bienvenue dans le menu d'aide");
-message.channel.send({embed})
+message.channel.send({help})
 	}
 	// fin de l'ajout
   });
