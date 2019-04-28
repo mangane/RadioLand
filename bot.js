@@ -99,7 +99,7 @@ client.on("message", async message => {
 	        message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
 	    }
 
-		if (command ==== "help")
+		if (command === "help")
 message.delete ()
 const embed = new Discord.RichEmbed
 .setColor("#2e1fe6")
