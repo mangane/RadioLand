@@ -103,4 +103,4 @@ client.on("message", async message => {
 	}
 	// fin de l'ajout
   });
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN)
