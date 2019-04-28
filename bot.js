@@ -11,28 +11,27 @@ client.user.setStatus('idle')
 client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub`, type: "LOOK" } });
 });
-
 client.on('guildMemberRemove', member => {
-	
-	const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
+	 const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
 	if(!channel)return;
-	const embed = new Discord.RichEmbed()
-	.setColor("#3ad729")
-	.addField("Au revoir", `${member}`)
-	.setTitle(":outbox_tray: Une personne est partie, reviendra-t-elle ?:outbox_tray:");
+    const embed = new Discord.RichEmbed()
+    .setColor("#3ad729")
+    .setFooter(`Identifiant :\n${member}`)
+    .addField("Au revoir", `${member}`)
+    .setTitle(":outbox_tray: Une personne est partie, reviendra-t-elle ?:outbox_tray:");
 	channel.send({embed})
 });
-
 client.on('guildMemberAdd', member => {
-	const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
+	
+  const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
 	if (!channel)return;
-	const embed = new Discord.RichEmbed()
-	.setColor("#3ad729")
-	.addField("Bienvenue", `${member}`)
-	.setTitle(":inbox_tray: Bienvenue sur le serveur :inbox_tray:");
+    const embed = new Discord.RichEmbed()
+    .setColor("#3ad729")
+    .setFooter(`Nous sommes le : ${member.joinedAt}`)
+    .addField("Bienvenue", `${member}`)
+    .setTitle(":inbox_tray: Bienvenue sur le serveur :inbox_tray:");
 	channel.send({embed})
 });
-
 client.on("message", async message => {
 	/* KoS_ début du code =>
 		ajout d'un condition de bot et d'une vérification si y'a un préfixe ou pas
