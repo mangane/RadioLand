@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "!";
+var prefix = ".";
 
 
 function return_date() {
@@ -168,4 +168,4 @@ client.on("message", async message => {
 	}
 	*/
   });
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
