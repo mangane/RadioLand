@@ -126,7 +126,7 @@ client.on("message", async message => {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		const channel = member.guild.channels.find("name",'départ-arrivé');// Find the channel ID "123456789"
+		const channel = clients.channels.find("name",'départ-arrivé');// Find the channel ID "123456789"
 	    if(channel) { // Check if that channel exists
 	        channel.send({embed});
 	    } else {
