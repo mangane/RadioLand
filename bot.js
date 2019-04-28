@@ -1,40 +1,8 @@
+          
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
-function return_date() 
-{
-    function dateFr()
-    {
-         // les noms de jours / mois
-         var jours = new Array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi");
-         var mois = new Array("janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre");
-         // on recupere la date
-         var date = new Date();
-         // on construit le message
-         var message = jours[date.getDay()] + " ";   // nom du jour
-         message += date.getDate() + " ";   // numero du jour
-         message += mois[date.getMonth()] + " ";   // mois
-         message += date.getFullYear();
-         return message;
-    }
 
-    function heure()
-    {
-         var date = new Date();
-         var heure = date.getHours();
-         var minutes = date.getMinutes();
-         var millisec = date.getMilliseconds();
-         if(minutes < 10)
-              minutes = "0" + minutes;
-          if(heure < 10)
-              heure = "0" + heure;
-              // ajout de 2h de décalage
-              heure = Number(heure) + 2;
-         return heure + "h" + minutes + " et " + millisec + " millisecondes";
-    }
-    return dateFr() + ' il est ' + heure();
-}
-});
 client.on('ready', () => {
 client.user.setStatus('idle')
 	.then(console.log)
@@ -55,15 +23,15 @@ client.on('guildMemberRemove', member => {
 	channel.send({embed})
 });
 client.on('guildMemberAdd', member => {
-    
+	
   const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
-    if (!channel)return;
+	if (!channel)return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .setFooter(`Nous sommes le : return_date()`)
+    .setFooter(`Nous sommes le : ${member.joinedAt}`)
     .addField("Bienvenue", `${member}`)
-    .setTitle("📥 Bienvenue sur le serveur 📥");
-    channel.send({embed})
+    .setTitle(":inbox_tray: Bienvenue sur le serveur :inbox_tray:");
+	channel.send({embed})
 });
 client.on("message", async message => {
 	/* KoS_ début du code =>
@@ -131,6 +99,14 @@ client.on("message", async message => {
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
 	    }
+
+		if (command === "help")
+message.delete ()
+const embed = new Discord.RichEmbed
+.setColor("#2e1fe6")
+.setTitle("Bienvenue dans le menu d'aide");
+message.channel.send({embed})
+	}
 	// fin de l'ajout
   });
 client.login(process.env.BOT_TOKEN)
