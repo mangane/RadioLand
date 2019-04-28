@@ -169,7 +169,7 @@ message.channel.send ({embed})
 		const member = message.mentions.members.first();
 		message.channel.send(`${message.mentions.users.first()} à été Kické par ${message.author.username}`);
 		member.kick();
-		
+		}
 	 if (command === "ban") {
 		if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
 			return message.channel.send("Vous n'avez pas accès à cette commande, seul les administrateur on accès à cette commande!");
