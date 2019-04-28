@@ -161,6 +161,23 @@ const embed = new Discord.RichEmbed()
 .setFooter(`demandé par ${message.author.username}`,`${message.author.avatarURL}`);
 message.channel.send ({embed})
 }
+	if(message.content.startsWith(prefix + "kick")) {
+		if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
+			return message.channel.send("Vous n'avez pas accès à cette commande, seul les administrateur on accès à cette commande!");
+		if(message.mentions.users.size === 0)
+			return message.channel.send("Vous avez oublié de mention la personne à exclure !");
+		const member = message.mentions.members.first();
+		message.channel.send(`${message.mentions.users.first()} à été Kické par ${message.author.username}`);
+		member.kick();
+	} else if(message.content.startsWith(prefix + "ban")) {
+		if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
+			return message.channel.send("Vous n'avez pas accès à cette commande, seul les administrateur on accès à cette commande!");
+		if(message.mentions.users.size === 0)
+			return message.channel.send("Vous avez oublié de mention la personne à exclure !");
+		const member = message.mentions.members.first();
+		message.channel.send(`${message.mentions.users.first()} à été banni par ${message.author.username}`);
+		member.ban();
+	}
 	
 	// fin de l'ajout
 
