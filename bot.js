@@ -103,7 +103,8 @@ client.on("message", async message => {
 message.delete ()
 const help = new Discord.RichEmbed
 .setColor("#2e1fe6")
-.setTitle("Bienvenue dans le menu d'aide");
+.setTitle("Bienvenue dans le menu d'aide")
+.addField("Test");
 message.channel.send({help})
 	}
 	// fin de l'ajout
