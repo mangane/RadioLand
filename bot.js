@@ -93,7 +93,7 @@ client.on("message", async message => {
 	}
 	if(command === "count") {
 		message.delete();
-		message.reply(`Nous sommes ${message.guild.memberCount} Sur RadioLand`);
+		message.reply(`Nous sommes ${message.guild.memberCount} Sur ${message.guild.name}`);
 	}
 	if(command === "stats") {
 		message.delete()
