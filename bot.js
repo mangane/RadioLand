@@ -186,7 +186,7 @@ const embed = new Discord.RichEmbed()
 .setColor ("#15f153")
 .setTitle ("Bienvenue sur l'interface de mes commandes")
 .setDescription("Prefix = .")
-.addField ("Commande universel :","``help``\ ``help-pub``\``stats``\``count``");
+.addField ("Commande universel :","``help\\help-pub\\stats\\count``");
 message.channel.send ({embed})
 }
 	
