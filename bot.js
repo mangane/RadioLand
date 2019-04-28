@@ -9,7 +9,7 @@ client.user.setStatus('idle')
 });
 
 client.on('ready', () => {
-	client.user.setPresence({ game: { name: `Dans Ta Pub`, type: "SEE" } });
+	client.user.setPresence({ game: { name: `Dans Ta Pub`, type: "LOOKING" } });
 });
 
 client.on('guildMemberRemove', member => {
