@@ -106,6 +106,7 @@ client.on("message", async message => {
 	}
 	if(command === "pub") {
 		message.delete()
+		message.delete()
 		var amsg = message.content;
 		// supprime le premier mot de la chaine (string) donc "!pub machin" va supprimer pub
 		var msg = amsg.substr(amsg.indexOf(" ") + 1);
