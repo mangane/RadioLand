@@ -100,12 +100,12 @@ client.on("message", async message => {
 	    }
 
 		if(command === "help")
-                   message.delete ()
+                    message.delete ()
                     const help = new Discord.RichEmbed()
-                     .setColor("#2e1fe6")
+                    .setColor("#2e1fe6")
                     .setTitle("Bienvenue dans le menu d'aide")
-.addField("Test");
-message.channel.send({help})
+                    .addField("Test");
+                    message.channel.send({help})
 	}
 	// fin de l'ajout
   });
