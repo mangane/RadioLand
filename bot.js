@@ -198,7 +198,12 @@ const embed = new Discord.RichEmbed  ()
 .setFooter ("Crée par ⏳Gaétan");
 message.channel.send ({embed})
 }
-	
+	if (command === 'say') {
+if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":x: Et ben non, je crois bien que tu n'a pas les permissions d'utiliser cette commande :x:");
+        let m = args.slice(1).join(' ');
+        message.delete(100);
+        message.channel.send(`${m}`);
+		}
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
