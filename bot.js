@@ -25,7 +25,7 @@ client.on('guildMemberAdd', member => {
 	if (!channel)return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .setFooter(`${member.createdAt}`)
+    .setFooter(`Identifiant : \n${member.id}\n tu à rejoint le :\n ${member.JoignedAt}`)
     .addField("Bienvenue", `${member}`)
     .setTitle(":inbox_tray: Bienvenue sur le serveur :inbox_tray:");
 	channel.send({embed})
