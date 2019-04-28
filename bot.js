@@ -49,7 +49,8 @@ client.on('guildMemberAdd', member => {
 		  let ruse = message.mentions.users.first()
 		  const embed = new Discord.RichEmbed ()
 		  .setColor("0x954D23")
-		  .setTitle(`information sur un utilisateur du serveur`);
+		  .setTitle(`information sur un utilisateur du serveur`)
+		  .addField (`${ruse} à rejoint le :`,`${ruse.joinedAt}`);
 		  message.channel.send({embed})
 }
   });
