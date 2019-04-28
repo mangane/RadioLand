@@ -109,9 +109,9 @@ client.on("message", async message => {
 		// Donne le nombre de caractères dans la chaine
 		console.log(msg + ' ' + msg.length);
 		// ici c'est length pas size inférieur ou égal
-		if(msg.length <= 10) {
-			console.log("Votre publicité doit contenir plus de 10 caractère");
-			return message.channel.send ("Votre publicité doit contenir plus de 10 caractère");	
+		if(msg.length <= 30) {
+			console.log("Votre publicité doit contenir plus de 30 caractère");
+			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
 
 		}
 		var reason = msg;
@@ -129,7 +129,7 @@ client.on("message", async message => {
 	    if(channel) { // Check if that channel exists
 	        channel.send({embed});
 	    } else {
-	        message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
+	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	    }
 
 		
