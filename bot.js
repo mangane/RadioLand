@@ -99,7 +99,12 @@ client.on("message", async message => {
 	        message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
 	    }
 
-		
+		if (command ==== "help")
+message.delete ()
+const embed = new Discord.RichEmbed
+.setColor("#2e1fe6")
+.setTitle("Bienvenue dans le menu d'aide");
+message.channel.send({embed})
 	}
 	// fin de l'ajout
   });
