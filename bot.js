@@ -130,15 +130,6 @@ client.on("message", async message => {
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
 	    }
-
-		if(command === "help") {
-                    message.delete ()
-                    const help = new Discord.RichEmbed()
-                    .setColor("#2e1fe6")
-                    .setTitle("Bienvenue dans le menu d'aide")
-                    .addField("Test");
-                    message.channel.send({help})
-	}
 	// fin de l'ajout
   });
 client.login(process.env.BOT_TOKEN)
