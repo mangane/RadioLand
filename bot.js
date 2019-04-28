@@ -48,12 +48,14 @@ client.on('guildMemberRemove', member => {
 	channel.send({embed})
 });
 client.on('guildMemberAdd', member => {
-    
+  console.log(return_date());
+  var date = return_date();
+  console.log(date);
   const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
     if (!channel)return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .setFooter("Nous sommes le : " return_date())
+    .setFooter("Nous sommes le : " + date)
     .addField("Bienvenue", `${member}`)
     .setTitle("📥 Bienvenue sur le serveur 📥");
     channel.send({embed})
