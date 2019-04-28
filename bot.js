@@ -186,7 +186,15 @@ const embed = new Discord.RichEmbed()
 .setColor ("#15f153")
 .setTitle ("Bienvenue sur l'interface de mes commandes")
 .setDescription("Prefix = .")
-.addField ("Commande universel :","``help\\help-pub\\stats\\count``");
+.addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite``");
+message.channel.send ({embed})
+}
+	if(command === "invite") {
+message.delete ()
+const embed = new Discord.RichEmbed  ()
+.setTitle("Voici l'invitation pour m'ajouter à votre serveur")
+.setDescription("https://discordapp.com/api/oauth2/authorize?client_id=570251638221307914&permissions=8&scope=bot")
+.setFooter ("Crée par ⏳Gaétan");
 message.channel.send ({embed})
 }
 	
