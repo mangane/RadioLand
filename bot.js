@@ -149,6 +149,7 @@ const embed = new Discord.RichEmbed()
 		.setColor("#15f153")
 .setTitle ("Bienvenue dans l'interface d'aide")
 .addField ("Pour savoir comment utiliser la commande. pub"," Taper .help-pub")
+.addField ("Pour afficher mes commandes :"," Taper !cmd")
 .setFooter (`Demandé par ${message.author.username}`,`${message.author.avatarURL}`);
 message.channel.send ({embed})
 }
