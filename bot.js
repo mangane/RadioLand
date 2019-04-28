@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
-
-
 function return_date() 
 {
     function dateFr()
@@ -25,14 +23,17 @@ function return_date()
          var date = new Date();
          var heure = date.getHours();
          var minutes = date.getMinutes();
+         var millisec = date.getMilliseconds();
          if(minutes < 10)
               minutes = "0" + minutes;
-         return heure + "h" + minutes;
+          if(heure < 10)
+              heure = "0" + heure;
+              // ajout de 2h de décalage
+              heure = Number(heure) + 2;
+         return heure + "h" + minutes + " et " + millisec + " millisecondes";
     }
-    //console.log(dateFr() + ' ' + heure());
-    return dateFr() + ' et il est ' + heure();
+    return dateFr() + ' il est ' + heure();
 }
-
 client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub`, type: "WATCHING" } });
 });
