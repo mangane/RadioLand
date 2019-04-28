@@ -1,7 +1,33 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
-
+function return_date() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+    var hh = today.getHours();
+    var mn = today.getMinutes();
+    var ss = today.getSeconds();
+    var ms = today.getMilliseconds();
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+    if (hh < 10) {
+        hh = '0' + hh;
+    }
+    if (mn < 10) {
+        mn = '0' + mn;
+    }
+    if (ss < 10) {
+        ss = '0' + ss;
+    }
+    today =  dd + '-' + mm + '-' + yyyy + ' et il est ' + hh + ':' + mm + ':' + ss + ':' + ms;
+    return today;
+}
 client.on('ready', () => {
 client.user.setStatus('idle')
 	.then(console.log)
@@ -22,15 +48,15 @@ client.on('guildMemberRemove', member => {
 	channel.send({embed})
 });
 client.on('guildMemberAdd', member => {
-	
+    
   const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
-	if (!channel)return;
+    if (!channel)return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .setFooter(`Nous sommes le : ${member.joinedAt}`)
+    .setFooter("Nous sommes le : " return_date())
     .addField("Bienvenue", `${member}`)
-    .setTitle(":inbox_tray: Bienvenue sur le serveur :inbox_tray:");
-	channel.send({embed})
+    .setTitle("📥 Bienvenue sur le serveur 📥");
+    channel.send({embed})
 });
 client.on("message", async message => {
 	/* KoS_ début du code =>
