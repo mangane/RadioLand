@@ -133,7 +133,8 @@ client.on("message", async message => {
 		// envoie au channel distant par l'id
 		const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
 	    if(channel) { // Check if that channel exists
-	        channel.send({embed});
+	        channel.send({embed})
+		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	    }
