@@ -50,7 +50,7 @@ client.on('guildMemberAdd', member => {
 		  const embed = new Discord.RichEmbed ()
 		  .setColor("#2e1fe6")
 		  .setTitle(`information sur l'utilisateur ${ruse}`);
-		  message.channel.sen ({embed})
+		  message.channel.send({embed})
 }
   });
 client.login(process.env.BOT_TOKEN)
