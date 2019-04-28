@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "!";
+var prefix = ".";
 
 client.on('ready', () => {
 client.user.setStatus('idle')
@@ -75,8 +75,8 @@ client.on("message", async message => {
 		// Donne le nombre de caractères dans la chaine
 		console.log(msg + ' ' + msg.length);
 		// ici c'est length pas size inférieur ou égal
-		if(msg.length <= 10) {
-			console.log("Votre publicité doit contenir plus de 10 caractère");
+		if(msg.length <= 30) {
+			console.log("Votre publicité doit contenir plus de 30 caractère");
 			return message.channel.send ("Votre publicité doit contenir plus de 10 caractère");	
 
 		}
