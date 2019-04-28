@@ -77,7 +77,7 @@ client.on("message", async message => {
 		// ici c'est length pas size inférieur ou égal
 		if(msg.length <= 30) {
 			console.log("Votre publicité doit contenir plus de 30 caractère");
-			return message.channel.send ("Votre publicité doit contenir plus de 10 caractère");	
+			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
 
 		}
 		var reason = msg;
