@@ -10,12 +10,11 @@ client.on('ready', () => {
   client.user.setPresence({ game: { name: `Dans Ta Pub`, type: "LISTENING" } });
   });
 client.on('guildMemberRemove', member => {
-	
 	 const channel = member.guild.channels.find(ch => ch.name === 'départ-arrivé');
 	if(!channel)return;
     const embed = new Discord.RichEmbed()
     .setColor("#3ad729")
-    .setFooter(`${member.id}`)
+    .setFooter(`${member.username}`)
     .addField("Au revoir", `${member}`)
     .setTitle(":outbox_tray: Une personne est partie, reviendra-t-elle ?:outbox_tray:");
 	channel.send({embed})
