@@ -149,7 +149,7 @@ const embed = new Discord.RichEmbed()
 		.setColor("#15f153")
 .setTitle ("Bienvenue dans l'interface d'aide")
 .addField ("Pour savoir comment utiliser la commande. pub"," Taper .help-pub")
-.addField ("Pour afficher mes commandes :"," Taper !cmd")
+.addField ("Pour afficher mes commandes :"," Taper .cmd")
 .setFooter (`Demandé par ${message.author.username}`,`${message.author.avatarURL}`);
 message.channel.send ({embed})
 }
@@ -180,6 +180,15 @@ message.channel.send ({embed})
 		message.channel.send(`${message.mentions.users.first()} à été banni par ${message.author.username}`);
 		member.ban();
 	}
+	if(command === "cmd") {
+message.delete ()
+const embed = new Discord.RichEmbed()
+.setColor ("#15f153")
+.setTitle ("Bienvenue sur l'interface de mes commandes")
+.setDescription("Prefix = .")
+.addField ("Commande universel :","``help``\ ``help-pub``\``stats``\``count``");
+message.channel.send ({embed})
+}
 	
 	// fin de l'ajout
 
