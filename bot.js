@@ -134,6 +134,13 @@ client.on("message", async message => {
 
 		
 	}
+	if (command === "help") {
+message.delete ()
+const embed = new Discord.RichEmbed()
+.setColor ("#2e1fe6")
+.setTitle ("Bienvenue dans l'interface d'aide");
+message.channel.send ({embed})
+}
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
