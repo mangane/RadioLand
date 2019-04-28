@@ -138,5 +138,5 @@ client.on("message", async message => {
                     .addField("Test");
                     message.channel.send({help})
 	}
-  });
+  };
 client.login(process.env.BOT_TOKEN);
