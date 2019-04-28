@@ -135,11 +135,19 @@ client.on("message", async message => {
 		
 	}
 	if (command === "help") {
+const embed = new Discord.RichEmbed()
+		.setColor("#15f153")
+.setTitle ("Bienvenue dans l'interface d'aide")
+.addField ("Pour savoir comment utiliser la commande. pub"," Taper .help-pub")
+.setFooter (`Demandé par ${message.author.username} ${message.author.avatarURL}`);
+message.channel.send ({embed})
+}
+	if(command === "help-pub") {
 message.delete ()
 const embed = new Discord.RichEmbed()
 .setColor ("#2e1fe6")
-.setTitle ("Bienvenue dans l'interface d'aide")
-.addField ("Pour te servir de moi :",`Pour utiliser mon service de .pub tu devra tout d'abord créé un salon nommer **dans-ta-pub** ensuite il te suffira de faire la commande sur un salon et tu viens de finir le setup du .pub`)
+.setTitle ("Bienvenue dans l'interface pour apprendre à utiliser la commande .pub")
+.addField ("Pour apprendre à te servir de moi :",`Pour utiliser mon service de .pub tu devra tout d'abord créé un salon nommer **dans-ta-pub** ensuite il te suffira de faire la commande sur un salon et tu viens de finir le setup du .pub`)
 .setFooter(`demandé par ${message.author.username}`,`${message.author.avatarURL}`);
 message.channel.send ({embed})
 }
