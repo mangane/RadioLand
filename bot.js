@@ -44,21 +44,12 @@ client.on('guildMemberAdd', member => {
     .addField("Nombre d'utilisateurs :", client.users.size);
     message.channel.send({embed})
 }
-	  if(message.content.startsWith(prefix + `pub`)) {
-    message.delete()
-if(message.size === 10)
-return mesage.channel.send ("Votre publicité doit contenir plus de 10 caractère")
-    let rreason = args.join(" ").slice(28);
-    let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Publicité")
-    .setColor("#15f153")
-    .addField("Publicité de :", `${message.author}`)
-    .addField("Publicité :", rreason);
-	
-
-    let reportschannel = message.guild.channels.find(`name`, "💫pub-vip💫");
-    if(!reportschannel) return message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
-reportschannel.send(reportEmbed);
-	}
+	  if (message.content.startsWith(prefix + "user-info")) { 
+		  message.delete()
+		  let ruse = message.mentions.users.first ()
+		  const embed = new Discord.RichEmbed ()
+		  .setColor("#2e1fe6")
+		  .setTitle(`information sur l'utilisateur ${ruse}`);
+}
   });
 client.login(process.env.BOT_TOKEN)
