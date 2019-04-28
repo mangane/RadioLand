@@ -44,6 +44,8 @@ client.on("message", async message => {
 	// maintenant au lieu de mettre un if(message.content.startsWith(prefix + "commande") tu met in if(command === "commande")
 	// c'est plus clair non ?
 	if(command === "purge") {
+	message.delete ()
+		if(!message.member.hasPermission("MANAGE_MESSAGE")) return message.channel.send(":x: Et ben non, je crois bien que tu n'a pas les permissions d'utiliser cette commande
 	const deleteCount = parseInt(args[0], 10);
 	if(!deleteCount || deleteCount < 2 || deleteCount > 100)
 		return message.reply("Veuillez indiquer un nombre compris entre 2 et 100 pour le nombre de messages à supprimer.");
