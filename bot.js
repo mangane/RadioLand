@@ -112,7 +112,7 @@ client.on("message", async message => {
 
 		}
 		var reason = msg;
-		var test = message.guild.channels.find(`name`, "#pub-dans-ta-pub");
+		var test = message.guild.channels.find(`name`, "pub-dans-ta-pub");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("#15f153")
@@ -122,7 +122,7 @@ client.on("message", async message => {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		let chan = client.channels.find("name", "#pub-dans-ta-pub"); // Find the channel ID "123456789"
+		let chan = client.channels.find("name", "pub-dans-ta-pub"); // Find the channel ID "123456789"
 	    if(chan) { // Check if that channel exists
 	        chan.send({embed});
 	    } else {
