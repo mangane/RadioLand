@@ -46,7 +46,7 @@ client.on('guildMemberAdd', member => {
 }
 	  if (message.content.startsWith(prefix + "user-info")) { 
 		  message.delete()
-		  let ruse = message.mentions.users.first ()
+		  let ruse = message.mentions.id.first()
 		  const embed = new Discord.RichEmbed ()
 		  .setColor("#2e1fe6")
 		  .setTitle(`information sur l'utilisateur ${ruse}`);
