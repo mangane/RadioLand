@@ -143,7 +143,7 @@ const embed = new Discord.RichEmbed()
 .setFooter(`demandé par ${message.author.username}`,`${message.author.avatarURL}`);
 message.channel.send ({embed})
 }
-	if(commmand = "sav") {
+	if(commmand === "sav") {
 message.reply ("Pour utiliser mon service de .pub tu devra tout d'abord créé un salon nommer **dans-ta-pub** ensuite il te suffira de faire la commande sur un salon et tu viens de finir le setup du .pub");
 }
 	// fin de l'ajout
