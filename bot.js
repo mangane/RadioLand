@@ -108,23 +108,20 @@ client.on("message", async message => {
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
 		message.delete()
-		if (talkedRecently.has(message.author.id)) {
-            message.channel.send("Attend une minute stp. - " + message.author);
+		const talkedRecently = new Set ();
+if (talkedRecently.has(msg.author.id)) {
+            msg.channel.send("Wait 1 minute before getting typing this again. - " + msg.author);
     } else {
-        talkedRecently.add(message.author.id);
+
+           // the user can type the command ... your command code goes here :)
+
+        // Adds the user to the set so that they can't talk for a minute
+        talkedRecently.add(msg.author.id);
         setTimeout(() => {
-          talkedRecently.delete(message.author.id);
+          // Removes the user from the set after a minute
+          talkedRecently.delete(msg.author.id);
         }, 60000);
     }
-		
-}
-	if(!message.content.startsWith(prefix))
-		return;
-  if(cooldown.has(author.id)){
-    message.delete();
-    return message.reply("patientez 20 secondes.")
-
-}
 	if(command === "pub") 
 		message.delete()
 		message.delete()
