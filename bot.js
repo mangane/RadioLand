@@ -4,7 +4,7 @@ var prefix = ".";
 let cooldown = new Set();
 let cdseconds = 20;
 setTimeout(() => {
-    cooldown.delete(message.author.id)
+    cooldown.delete(author.id)
   }, cdseconds * 1000)
 
 
