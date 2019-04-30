@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
+const cooldown = new Set();
 
 function return_date() 
 {
@@ -106,6 +107,9 @@ client.on("message", async message => {
 		.addField("Nombre de serveur :", client.guilds.size)
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
+	}else{
+        if(cooldown.has(message.author.id)){
+            message.channel.send(":x: **Tu dois attendre 20 secondes pour réutiliser la commande**")
 	}
 	if(command === "pub") {
 		message.delete()
@@ -204,6 +208,13 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         message.delete(100);
         message.channel.send(`${m}`);
 		}
+
+            cooldown.add(message.author.id);
+            
+            setTimeout(() => {
+
+         coolvip.delete(message.author.id);
+          }, 20000);
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
