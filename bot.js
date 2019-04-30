@@ -106,7 +106,7 @@ client.on("message", async message => {
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
 }
-	if(command === "pub") 
+	if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
 		// supprime le premier mot de la chaine (string) donc "!pub machin" va supprimer pub
