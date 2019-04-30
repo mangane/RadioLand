@@ -1,8 +1,16 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
-let cooldown = new Set();
-let cdseconds = 20;
+const talkedRecently = new Set();
+
+if (talkedRecently.has(msg.author.id)) {
+            msg.channel.send("Attend une minute svp. - " + msg.author);
+    } else {
+        talkedRecently.add(msg.author.id);
+        setTimeout(() => {
+          talkedRecently.delete(msg.author.id);
+        }, 60000);
+    }
 
 function return_date() 
 {
