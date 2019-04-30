@@ -107,11 +107,11 @@ client.on("message", async message => {
 		.addField("Nombre de serveur :", client.guilds.size)
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
-	} else 				       
+	} else { 				       
 cooldown.add(message.author.id); 
-					   setTimeout(() => { 
-						   cooldown.delete(message.author.id); }, 60000); 
-						      }
+setTimeout(() => { 
+cooldown.delete(message.author.id); }, 60000); 
+ }
 	if(command === "pub") {
 		message.delete()
 		message.delete()
