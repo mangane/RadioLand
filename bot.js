@@ -3,15 +3,6 @@ const client = new Discord.Client();
 var prefix = ".";
 const talkedRecently = new Set();
 
-if (talkedRecently.has(message.author.id)) {
-            message.channel.send("Attend une minute svp. - " + message.author);
-    } else {
-        talkedRecently.add(message.author.id);
-        setTimeout(() => {
-          talkedRecently.delete(message.author.id);
-        }, 60000);
-    }
-
 function return_date() 
 {
     function dateFr()
@@ -117,6 +108,14 @@ client.on("message", async message => {
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
 		message.delete()
+		if (talkedRecently.has(message.author.id)) {
+            message.channel.send("Attend une minute svp. - " + message.author);
+    } else {
+        talkedRecently.add(message.author.id);
+        setTimeout(() => {
+          talkedRecently.delete(message.author.id);
+        }, 60000);
+    }
 		
 }
 	if(!message.content.startsWith(prefix))
