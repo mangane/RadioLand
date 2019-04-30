@@ -108,8 +108,9 @@ client.on("message", async message => {
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
 		message.delete()
+		return;
 		if (talkedRecently.has(message.author.id)) {
-            message.channel.send("Attend une minute svp. - " + message.author);
+            message.channel.send("Attend une minute stp. - " + message.author);
     } else {
         talkedRecently.add(message.author.id);
         setTimeout(() => {
@@ -125,7 +126,7 @@ client.on("message", async message => {
     return message.reply("patientez 20 secondes.")
 
 }
-	if(command === "pub") {
+	if(command === "pub") 
 		message.delete()
 		message.delete()
 		var amsg = message.content;
