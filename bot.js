@@ -3,10 +3,6 @@ const client = new Discord.Client();
 var prefix = ".";
 let cooldown = new Set();
 let cdseconds = 20;
-setTimeout(() => {
-    cooldown.delete(author.id)
-  }, cdseconds * 1000)
-
 
 function return_date() 
 {
