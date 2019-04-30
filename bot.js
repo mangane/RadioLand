@@ -111,7 +111,6 @@ client.on("message", async message => {
 					   setTimeout(() => { 
 						   cooldown.delete(message.author.id); }, 60000); 
 						      }
-    }
 	if(command === "pub") {
 		message.delete()
 		message.delete()
