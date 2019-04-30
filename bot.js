@@ -110,7 +110,6 @@ client.on("message", async message => {
 	} else {
        if(cooldown.has(message.author.id)){
             message.channel.send(":x: **Tu dois attendre 45 secondes !**")
-	       message.delete()
     }
 	}
 	if(command === "pub") {
@@ -216,7 +215,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
 
          cooldown.delete(message.author.id);
           }, 10000);
-}
+
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
