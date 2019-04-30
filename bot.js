@@ -110,13 +110,7 @@ client.on("message", async message => {
 	}else{
         if(cooldown.has(message.author.id)){
             message.channel.send(":x: **Tu dois attendre 20 secondes pour réutiliser la commande**");
-		 } else { 
-	cooldown.add(message.author.id); 
-			 setTimeout(() => { 
-	cooldown.delete(message.author.id); 
-			 }, 
-				    60000); 
-		 }
+		 } 
 	if(command === "pub") {
 		message.delete()
 		message.delete()
@@ -213,7 +207,12 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         let m = args.slice(1).join(' ');
         message.delete(100);
         message.channel.send(`${m}`);
-		}
+		} 
+	if (cooldown.has(message.author.id)) { 
+		message.channel.send("Attend une minute svp. - " + message.author); 
+	} else { cooldown.add(message.author.id); 
+		setTimeout(() => { cooldown.delete(message.author.id); }, 60000); 
+	       }
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
