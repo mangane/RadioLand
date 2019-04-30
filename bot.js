@@ -3,12 +3,12 @@ const client = new Discord.Client();
 var prefix = ".";
 const talkedRecently = new Set();
 
-if (talkedRecently.has(msg.author.id)) {
-            msg.channel.send("Attend une minute svp. - " + msg.author);
+if (talkedRecently.has(message.author.id)) {
+            message.channel.send("Attend une minute svp. - " + message.author);
     } else {
-        talkedRecently.add(msg.author.id);
+        talkedRecently.add(message.author.id);
         setTimeout(() => {
-          talkedRecently.delete(msg.author.id);
+          talkedRecently.delete(message.author.id);
         }, 60000);
     }
 
