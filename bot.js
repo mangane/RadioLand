@@ -117,7 +117,7 @@ client.on("message", async message => {
 }
 	if(!message.content.startsWith(prefix))
 		return;
-  if(cooldown.has(message.author.id)){
+  if(cooldown.has(author.id)){
     message.delete();
     return message.reply("patientez 20 secondes.")
 
