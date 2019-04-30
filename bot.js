@@ -216,6 +216,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
 
          cooldown.delete(message.author.id);
           }, 10000);
+}
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
