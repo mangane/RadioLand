@@ -110,7 +110,7 @@ client.on("message", async message => {
 	} else 
 		if (cooldown.has(message.author.id)) { 
 		message.channel.send("Attend une minute svp. - " + message.author); 
-					       }
+					       
 cooldown.add(message.author.id); 
 					   setTimeout(() => { 
 						   cooldown.delete(message.author.id); }, 60000); 
