@@ -116,6 +116,10 @@ client.on("message", async message => {
   if(cooldown.has(message.author.id)){
     message.delete();
     return message.reply("patientez 20 secondes.")
+	  setTimeout(() => {
+    cooldown.delete(message.author.id)
+  }, cdseconds * 1000)
+
 }
 	if(command === "pub") {
 		message.delete()
@@ -214,10 +218,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         message.delete(100);
         message.channel.send(`${m}`);
 		} 
-	setTimeout(() => {
-    cooldown.delete(message.author.id)
-  }, cdseconds * 1000)
-
+	
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
