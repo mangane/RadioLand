@@ -209,12 +209,12 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         message.delete(100);
         message.channel.send(`${m}`);
 		} 
-	cooldown.add(message.author.id);
-            
-            setTimeout(() => {
-
-         cooldown.delete(message.author.id);
-          }, 10000);
+	if (cooldown.has(msg.author.id)) { 
+		msg.channel.send("Attend une minute svp. - " + msg.author); 
+					       } else { cooldown.add(msg.author.id); 
+					   setTimeout(() => { 
+						   talkedRecently.delete(msg.author.id); }, 60000); 
+						      }
 
 	// fin de l'ajout
 
