@@ -108,7 +108,6 @@ client.on("message", async message => {
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
 		message.delete()
-		return;
 		if (talkedRecently.has(message.author.id)) {
             message.channel.send("Attend une minute stp. - " + message.author);
     } else {
