@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
-const cooldown = new Set();
+let cooldown = new Set();
+let cdseconds = 20;
 
 function return_date() 
 {
@@ -112,7 +113,7 @@ client.on("message", async message => {
 }
 	if(cooldown.has(message.author.id)){
     message.delete();
-    return message.reply("You have to wait 5 seconds between commands.")
+    return message.reply("Merci de patientez 20 seconds")
 	}
 	if(command === "pub") {
 		message.delete()
