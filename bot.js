@@ -120,7 +120,7 @@ if (talkedRecently.has(msg.author.id)) {
         setTimeout(() => {
           // Removes the user from the set after a minute
           talkedRecently.delete(msg.author.id);
-        }, 60000);
+        }, 1000);
     }
 	if(command === "pub") 
 		message.delete()
