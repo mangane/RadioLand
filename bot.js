@@ -111,10 +111,11 @@ client.on("message", async message => {
 		message.delete()
 		
 }
-	if(cooldown.has(message.author.id)){
+	if(!command === prefix) return;
+  if(cooldown.has(message.author.id)){
     message.delete();
-    return message.reply("Merci de patientez 20 seconds")
-	}
+    return message.reply("patientez 20 secondes.")
+}
 	if(command === "pub") {
 		message.delete()
 		message.delete()
