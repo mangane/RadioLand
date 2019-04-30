@@ -3,6 +3,10 @@ const client = new Discord.Client();
 var prefix = ".";
 let cooldown = new Set();
 let cdseconds = 20;
+setTimeout(() => {
+    cooldown.delete(message.author.id)
+  }, cdseconds * 1000)
+
 
 function return_date() 
 {
@@ -116,9 +120,6 @@ client.on("message", async message => {
   if(cooldown.has(message.author.id)){
     message.delete();
     return message.reply("patientez 20 secondes.")
-	  setTimeout(() => {
-    cooldown.delete(message.author.id)
-  }, cdseconds * 1000)
 
 }
 	if(command === "pub") {
