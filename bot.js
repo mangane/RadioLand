@@ -119,7 +119,6 @@ client.on("message", async message => {
 		if(msg.length <= 30) {
 			console.log("Votre publicité doit contenir plus de 30 caractère");
 			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
-
 		}
 		var reason = msg;
 		var test = message.guild.channels.find(`name`, "dans-ta-pub");
@@ -199,7 +198,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         let m = args.slice(1).join(' ');
         message.delete(100);
         message.channel.send(`${m}`);
-		} 
+} 
 	
 	// fin de l'ajout
 
