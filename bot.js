@@ -152,7 +152,7 @@ message.channel.send ({embed})
 const embed = new Discord.RichEmbed()
                .setColor ("#2e1fe6")
 .setTitle ("Bienvenue dans l'interface pour apprendre à utiliser la commande .pub")
-.addField ("Pour apprendre à te servir de moi :"," Pour utiliser la commande. pub il vous faut un salon nommer\n ``dans-ta-pub``, le bot devra avoir accès à ce salon, pour y poster les pubs!")
+.addField ("Pour apprendre à te servir de moi :"," Pour utiliser la commande. pub il vous faut un salon nommer\n ``dans-ta-pub``, le bot devra avoir accès à ce salon, pour y poster les pubs!\n\n Nous vous remercions!  \n\n __Le staff de DanBot__")
 .setFooter(`demandé par ${message.author.username}`,`${message.author.avatarURL}`);
 		message.channel.send ({embed})
 }
