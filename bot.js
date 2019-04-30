@@ -112,7 +112,7 @@ client.on("message", async message => {
 		
 }
 	if(!message.content.startsWith(prefix))
-		message.delete ();
+		message.delete ()
 	return;
   if(cooldown.has(message.author.id)){
     message.delete();
