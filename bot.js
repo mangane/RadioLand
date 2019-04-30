@@ -107,7 +107,7 @@ client.on("message", async message => {
 		.addField("Nombre de serveur :", client.guilds.size)
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
-	}else{
+	else{
         if(cooldown.has(message.author.id)){
             message.channel.send(":x: **Tu dois attendre 20 secondes pour réutiliser la commande**");
 	}
