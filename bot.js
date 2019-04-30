@@ -153,9 +153,8 @@ message.delete ()
 const embed = new Discord.RichEmbed()
 .setColor ("#2e1fe6")
 .setTitle ("Bienvenue dans l'interface pour apprendre à utiliser la commande .pub")
-.addField ("Pour apprendre à te servir de moi :",`Pour utiliser mon service de .pub tu devra tout d'abord créé un salon nommer **dans-ta-pub** ensuite il te suffira de faire la commande sur un salon et tu viens de finir le setup du .pub`)
+.addField ("Pour apprendre à te servir de moi :","Pour utiliser la commande. pub il vous faut un salon nommer : \n dans-ta-pub\nle bot devra avoir accès à ce salon, pour y poster les pubs!")
 .setFooter(`demandé par ${message.author.username}`,`${message.author.avatarURL}`);
-message.channel.send ({embed})
 }
 	if(command === "kick") {
 		if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
