@@ -206,6 +206,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         message.channel.send(`${m}`);
 		} 
 	if (cooldown.has(message.author.id)) { 
+		message.delete()
 		message.channel.send("Attend une minute svp. - " + message.author); 
 	} else { cooldown.add(message.author.id); 
 		setTimeout(() => { cooldown.delete(message.author.id); }, 60000); 
