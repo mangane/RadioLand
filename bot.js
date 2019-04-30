@@ -109,7 +109,8 @@ client.on("message", async message => {
 		message.channel.send({embed})
 	} else {
        if(cooldown.has(message.author.id)){
-            message.channel.send(":x: **Tu dois attendre 45 secondes , tu dors encore**")
+            message.channel.send(":x: **Tu dois attendre 45 secondes !**")
+	       message.delete()
     }
 	}
 	if(command === "pub") {
