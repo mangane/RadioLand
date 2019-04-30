@@ -107,6 +107,7 @@ client.on("message", async message => {
 		.addField("Nombre de serveur :", client.guilds.size)
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
+		message.delete()
 		
 }
 	if(cooldown.has(message.author.id)){
