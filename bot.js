@@ -107,7 +107,10 @@ client.on("message", async message => {
 		.addField("Nombre de serveur :", client.guilds.size)
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
-	}
+	}else{
+        if(cooldown.has(message.author.id)){
+            message.channel.send(":x: **Tu dois attendre 45 secondes , tu dors encore**")
+    }
 	if(command === "pub") {
 		message.delete()
 		message.delete()
