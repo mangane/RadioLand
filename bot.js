@@ -107,10 +107,7 @@ client.on("message", async message => {
 		.addField("Nombre de serveur :", client.guilds.size)
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
-	}else{
-        if(cooldown.has(message.author.id)){
-            message.channel.send(":x: **Tu dois attendre 45 secondes , tu dors encore**")
-    }
+	}
 	if(command === "pub") {
 		message.delete()
 		message.delete()
@@ -210,7 +207,8 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
 		} 
 	if (cooldown.has(message.author.id)) { 
 		message.delete()
-		message.channel.send("Attend une minute svp. - " + message.author); 
+		message.channel.send("Attend une minute svp. - " + message.author);
+		return message.delete()
 	} else { cooldown.add(message.author.id); 
 		setTimeout(() => { cooldown.delete(message.author.id); }, 60000); 
 	       }
