@@ -138,7 +138,7 @@ client.on("message", async message => {
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	    }
-
+}
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
 		.setColor("#15f153")
