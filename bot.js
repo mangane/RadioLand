@@ -107,6 +107,11 @@ client.on("message", async message => {
 		.addField("Nombre de serveur :", client.guilds.size)
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
+		
+}
+	if(cooldown.has(message.author.id)){
+    message.delete();
+    return message.reply("You have to wait 5 seconds between commands.")
 	}
 	if(command === "pub") {
 		message.delete()
