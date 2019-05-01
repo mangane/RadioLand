@@ -124,7 +124,7 @@ client.on("message", async message => {
 		var test = message.guild.channels.find(`name`, "dans-ta-pub");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
-		.setColor("#15f153")
+		.setColor("RANDOM")
 		.setTitle("Publicité")
 		.addField("Publicité de :", `${message.author}`)
 		.addField("Publicité :", reason);
