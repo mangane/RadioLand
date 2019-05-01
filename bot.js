@@ -203,6 +203,29 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
     message.reply("Pong! (Calcul en cours...)").then(m => m.edit(`${message.author}:ping_pong: Pong!__\n La latence actuelle est de ${m.createdTimestamp - message.createdTimestamp}ms__`) );
     message.react("✅");
   }
+	   if (command === "user-info")
+ const user = message.mentions.users.first ()
+ const member = message.guild.member(user)
+
+     // Forming the Embed
+     const embed = new Discord.RichEmbed() // Use Discord.MessageEmbed if you use the master version
+        .setColor('RANDOM') // I just put random in here, but you can chnage it to anything else.
+        .setThumbnail(user.avatarURL)
+        .setTitle(`${user.username}#${user.discriminator}`)
+        .addField('ID:', `${user.id}`, true)
+        .addField('Pseudonyme :', `${member.nickname !== null ? `${member.nickname}` : 'None'}`, true)
+        .addField('Sont compte est créé depuis le :', `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('Il à rejoint le serveur le:', `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        //.addField('Client:', `${user.client}`, true) // Turns out this doesn't work - We don't need this.
+        .addField('Status:', `${user.presence.status}`, true)
+        .addField('Game:', `${user.presence.game ? user.presence.game.name : 'None'}`, true)
+        .addField('Roles:', member.roles.map(roles => `${roles.name}`).join(', '), true)
+        .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
+
+    // Send the Embed
+    message.channel.send({embed});
+
+}
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
