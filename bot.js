@@ -91,7 +91,7 @@ client.on("message", async message => {
 		return message.reply("Veuillez indiquer un nombre compris entre 2 et 100 pour le nombre de messages à supprimer.").then(message => {message.delete(5000)});
 		const fetched = await message.channel.fetchMessages({limit: deleteCount});
 		message.channel.bulkDelete(fetched)
-		.catch(error => message.reply(`Impossible de supprimer des messages à cause de: ${error}`));
+		.catch(error => message.reply(`Impossible de supprimer des messages à cause de: ${error}`)).then(message => {message.delete(5000)});
 	}
 	if(command === "count") {
 		message.delete();
