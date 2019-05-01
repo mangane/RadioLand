@@ -259,7 +259,7 @@ message.channel.send ({embed })
 		var test = message.guild.channels.find(`id`, "572131508916191243);
 		console.log(test);
 		const embed = new Discord.RichEmbed()
-		.setColor("#15f153")
+		.setColor("RANDOM")
 		.setTitle("Signalement")
 		.addField("Signaler par :", `${message.author}`)
 		.addField("Raison signalement" :", reason);
