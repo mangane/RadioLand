@@ -85,10 +85,10 @@ client.on("message", async message => {
 	if(command === "purge") {
 		message.delete()
 		if(!message.member.hasPermission("MANAGE_MESSAGE")) 
-			return message.channel.send(":x: Et ben non, je crois bien que tu n'a pas les permissions d'utiliser cette commande :x:")
+			return message.channel.send(":x: Et ben non, je crois bien que tu n'a pas les permissions d'utiliser cette commande :x:").then(message => {message.delete(5000)})
 	const deleteCount = parseInt(args[0], 10);
 	if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-		return message.reply("Veuillez indiquer un nombre compris entre 2 et 100 pour le nombre de messages à supprimer.");
+		return message.reply("Veuillez indiquer un nombre compris entre 2 et 100 pour le nombre de messages à supprimer.").then(message => {message.delete(5000)});
 		const fetched = await message.channel.fetchMessages({limit: deleteCount});
 		message.channel.bulkDelete(fetched)
 		.catch(error => message.reply(`Impossible de supprimer des messages à cause de: ${error}`));
