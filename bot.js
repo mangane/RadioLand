@@ -241,36 +241,6 @@ const embed = new Discord.RichEmbed  ()
 .setDescription("Nous avons simplifier au maximum les messages de bienvenue, il vous suffit de crée un salon nommer\``départ-arrivé`` !!!\n Bonne continuation\n__Le staff de DanPub__");
 message.channel.send ({embed })
 }
-	if(command === "signale") {
-		message.delete()
-		var amsg = message.content;
-		// supprime le premier mot de la chaine (string) donc "!pub machin" va supprimer pub
-		var msg = amsg.substr(amsg.indexOf(" ") + 1);
-		console.log(msg);
-		console.log(typeof msg);
-		// Donne le nombre de caractères dans la chaine
-		console.log(msg + ' ' + msg.length);
-		// ici c'est length pas size inférieur ou égal
-		if(msg.length <= 10) {
-			console.log("Votre signalement doit contenir plus de 10 caractère, n'oubliez pas d'indiquer votre pseudonyme pour que l'on vous recontacte");
-			return message.channel.send ("Votre publicité doit contenir plus de 10 caractère, n'oubliez pas d'indiquer votre pseudonyme avec les # pout que l'on vous recontact si besoin!");	
-		}
-		var reason = msg;
-		var test = message.guild.channels.find(`id`, "572131508916191243");
-		console.log(test);
-		const embed = new Discord.RichEmbed()
-		.setColor("RANDOM")
-		.setTitle("Signalement")
-		.addField("Signaler par :", `${message.author}`)
-		.addField("Raison signalement :", reason);
-		// envoie au channel courant
-		//message.channel.send({embed})
-		// envoie au channel distant par l'id
-		const channel = message.guild.channels.find(`id`,"572131508916191243");// Find the channel ID "123456789"
-	    if(channel) { 
-	        channel.send({embed})
-		    }
-	
 
 	// fin de l'ajout
 
