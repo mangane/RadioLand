@@ -180,7 +180,7 @@ const embed = new Discord.RichEmbed()
 .setColor ("RANDOM")
 .setTitle ("Bienvenue sur l'interface de mes commandes")
 .setDescription("Prefix = .")
-.addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite\\user-info\\dons\\support``")
+.addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite\\user-info\\dons\\support\\help_bvn``")
 .addField ("Commande modération :","``kick\\ban\\purge``");
 message.channel.send ({embed})
 }
