@@ -256,7 +256,7 @@ message.channel.send ({embed })
 			return message.channel.send ("Votre publicité doit contenir plus de 10 caractère, n'oubliez pas d'indiquer votre pseudonyme avec les # pout que l'on vous recontact si besoin!");	
 		}
 		var reason = msg;
-		var test = message.guild.channels.find(`id`, "572131508916191243);
+		var test = message.guild.channels.find(`id`, "572131508916191243");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
