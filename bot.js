@@ -100,7 +100,7 @@ client.on("message", async message => {
 	if(command === "stats") {
 		message.delete()
 		const embed = new Discord.RichEmbed()
-		.setColor("#2e1fe6")
+		.setColor("RANDOM")
 		.setTitle("Statistiques")
 		.addField("Nombre de serveur :", client.guilds.size)
 		.addField("Nombre d'utilisateurs :", client.users.size);
@@ -141,7 +141,7 @@ client.on("message", async message => {
 }
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
-		.setColor("#15f153")
+		.setColor("RANDOM")
 .setTitle ("Bienvenue dans l'interface d'aide")
 .addField ("Pour savoir comment utiliser la commande. pub"," Taper .help-pub")
 .addField ("Pour afficher mes commandes :"," Taper .cmd")
@@ -150,7 +150,7 @@ message.channel.send ({embed})
 }
 	if(command === "help-pub") {
 const embed = new Discord.RichEmbed()
-               .setColor ("#2e1fe6")
+               .setColor ("RANDOM")
 .setTitle ("Bienvenue dans l'interface pour apprendre à utiliser la commande .pub")
 .addField ("Pour apprendre à te servir de moi :"," Pour utiliser la commande. pub il vous faut un salon nommer\n ``dans-ta-pub``, le bot devra avoir accès à ce salon, pour y poster les pubs!\n\n Nous vous remercions!  \n\n __Le staff de DanBot__")
 .setFooter(`demandé par ${message.author.username}`,`${message.author.avatarURL}`);
