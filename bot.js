@@ -221,7 +221,7 @@ if (command === "dons") {
 message.delete ()
 const embed = new Discord.RichEmbed  ()
 .setColor ("RANDOM")
-.setDescription("https://www.paypal.me/SupportOverBot
+.setDescription("https://www.paypal.me/SupportOverBot")
 .setTitle("Nous faire un dons");
 message.channel.send ({embed})
 }
