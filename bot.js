@@ -179,7 +179,7 @@ message.delete ()
 const embed = new Discord.RichEmbed()
 .setColor ("RANDOM")
 .setTitle ("Bienvenue sur l'interface de mes commandes")
-.setDescription("Prefix = .")
+.setDescription("Prefix .")
 .addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite\\user-info\\dons\\support\\help-bvn``")
 .addField ("Commande modération :","``kick\\ban\\purge``");
 message.channel.send ({embed})
