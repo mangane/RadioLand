@@ -53,7 +53,7 @@ client.on('guildCreate', guild => {
         .addField("🌍 __Région du serveur__ :", guild.region, true)
         .addField("📝 __ID du serveur__ :", guild.id, true)
         .setColor("RANDOM")
-      client.channels.get('532627768979226644').send(embed);
+      client.channels.get('572131508916191243').send(embed);
 });
 
 
