@@ -198,10 +198,10 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         message.delete(100);
         message.channel.send(`${m}`);
 } 
-	if (command === "ping"){
-    msg.delete();
-    msg.reply("Pong! (Calcul en cours...)").then(m => m.edit(`${msg.author}:ping_pong: Pong!  (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms`) );
-    msg.react("✅");
+	if (command === "ping") {
+    message.delete();
+    message.reply("Pong! (Calcul en cours...)").then(m => m.edit(`${message.author}:ping_pong: Pong!  (Current latency is ${m.createdTimestamp - message.createdTimestamp}ms`) );
+    message.react("✅");
   }
 	// fin de l'ajout
 
