@@ -200,7 +200,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
 } 
 	if (command === "ping") {
     message.delete();
-    message.reply("Pong! (Calcul en cours...)").then(m => m.edit(`${message.author}:ping_pong: Pong!  (La latence actuelle est ${m.createdTimestamp - message.createdTimestamp}ms`) );
+    message.reply("Pong! (Calcul en cours...)").then(m => m.edit(`${message.author}:ping_pong: Pong!__\n La latence actuelle est de ${m.createdTimestamp - message.createdTimestamp}ms__`) );
     message.react("✅");
   }
 	// fin de l'ajout
