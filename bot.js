@@ -209,7 +209,6 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
  const member = message.guild.member(user)
      const embed = new Discord.RichEmbed() // Use Discord.MessageEmbed if you use the master version
         .setColor('RANDOM') // I just put random in here, but you can chnage it to anything else.
-        .setThumbnail(user.avatarURL)
         .setTitle(`${user.username}#${user.discriminator}`)
         .addField('ID:', `${user.id}`, true)
         .addField('Sont compte est créé depuis le :', `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
