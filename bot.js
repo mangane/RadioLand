@@ -180,7 +180,7 @@ const embed = new Discord.RichEmbed()
 .setColor ("RANDOM")
 .setTitle ("Bienvenue sur l'interface de mes commandes")
 .setDescription("Prefix = .")
-.addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite\\user-info\\dons``")
+.addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite\\user-info\\dons\\support``")
 .addField ("Commande modération :","``kick\\ban\\purge``");
 message.channel.send ({embed})
 }
@@ -223,6 +223,14 @@ const embed = new Discord.RichEmbed  ()
 .setColor ("RANDOM")
 .setDescription("https://www.paypal.me/SupportOverBot")
 .setTitle("Nous faire un dons");
+message.channel.send ({embed})
+}
+	if (command === "support") {
+message.delete ()
+const embed = new Discord.RichEmbed  ()
+.setColor ("RANDOM")
+.setDescription("https://discord.gg/F9HK5cC")
+.setTitle("Nous rejoindre");
 message.channel.send ({embed})
 }
 
