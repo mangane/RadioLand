@@ -198,7 +198,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         message.delete(100);
         message.channel.send(`${m}`);
 } 
-	if (msg.content === prefix + "ping"){
+	if (command === "ping"){
     msg.delete();
     msg.reply("Pong! (Calcul en cours...)").then(m => m.edit(`${msg.author}:ping_pong: Pong!  (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms`) );
     msg.react("✅");
