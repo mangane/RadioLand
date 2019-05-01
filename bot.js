@@ -211,8 +211,6 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         .setColor('RANDOM') // I just put random in here, but you can chnage it to anything else.
         .setTitle(`${user.username}`)
         .addField('ID:', `${user.id}`, true)
-        .addField('Sont compte est créé depuis le :', `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
-        .addField('Il à rejoint le serveur le:', `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
         .addField('Status:', `${user.presence.status}`, true)
         .addField('Game:', `${user.presence.game ? user.presence.game.name : 'None'}`, true)
         .setFooter(`Demandé par ${message.author.username}`);
