@@ -262,7 +262,7 @@ message.channel.send ({embed })
 		.setColor("RANDOM")
 		.setTitle("Signalement")
 		.addField("Signaler par :", `${message.author}`)
-		.addField("Raison signalement" :", reason);
+		.addField("Raison signalement :", reason);
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
