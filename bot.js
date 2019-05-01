@@ -269,7 +269,7 @@ message.channel.send ({embed })
 		const channel = message.guild.channels.find(`id`,"572131508916191243");// Find the channel ID "123456789"
 	    if(channel) { 
 	        channel.send({embed})
-		    message.channel.send ("Votre signalement de bug à été envoyer !!!");
+		    message.channel.send ("Votre signalement de bug à été envoyer !!!")
 		    }
 	
 
