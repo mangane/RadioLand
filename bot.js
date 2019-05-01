@@ -132,7 +132,7 @@ client.on("message", async message => {
 			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
 		}
 		var reason = msg;
-		var test = message.client.channels.find(`name`, "dans-ta-pub");
+		var test = message.guild.channels.find(`name`, "dans-ta-pub");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
@@ -142,7 +142,7 @@ client.on("message", async message => {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		const channel = message.client.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
+		const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
 	    if(channel) { // Check if that channel exists
 	        channel.send({embed})
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
