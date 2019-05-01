@@ -43,7 +43,18 @@ client.user.setStatus('idle')
 client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
 });
-
+client.on('guildCreate', guild => {
+    const embed = new Discord.RichEmbed()
+        .setDescription(`📌 Merci à **${guild.name}** d'avoir ajouté DanPub.`)
+        .addField("📋 __Nom du serveur__", guild.name, true)
+        .addField("📊 __Nombre de membres__ :", guild.memberCount, true)
+        .addField("💻 __Nombre de salons__ :", guild.channels.size, true)
+        .addField("👤 __Propriétaire__ :", guild.owner, true)
+        .addField("🌍 __Région du serveur__ :", guild.region, true)
+        .addField("📝 __ID du serveur__ :", guild.id, true)
+        .setColor("RANDOM")
+      client.channels.get('532627768979226644').send(embed);
+});
 
 
 client.on('guildMemberRemove', member => {
