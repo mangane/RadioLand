@@ -177,7 +177,7 @@ const embed = new Discord.RichEmbed()
 	if(command === "cmd") {
 message.delete ()
 const embed = new Discord.RichEmbed()
-.setColor ("#15f153")
+.setColor ("RANDOM")
 .setTitle ("Bienvenue sur l'interface de mes commandes")
 .setDescription("Prefix = .")
 .addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite``")
