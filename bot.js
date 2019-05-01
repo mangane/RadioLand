@@ -95,7 +95,7 @@ client.on("message", async message => {
 	}
 	if(command === "count") {
 		message.delete();
-		message.reply(`Nous sommes ${message.guild.memberCount} Sur ${message.guild.name}`);
+		message.reply(`Nous sommes ${message.guild.memberCount} Sur ${message.guild.name}`).then(message => {message.delete(5000)});
 	}
 	if(command === "stats") {
 		message.delete()
