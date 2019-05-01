@@ -199,7 +199,7 @@ message.channel.send ({embed})
 message.delete ()
 const embed = new Discord.RichEmbed  ()
 .setTitle("Voici l'invitation pour m'ajouter à votre serveur")
-.setDescription("[test](https://discordapp.com/api/oauth2/authorize?client_id=570251638221307914&permissions=8&scope=bot)")
+.setDescription("Pour m'ajouter à votre serveur cliquer [ici](https://discordapp.com/api/oauth2/authorize?client_id=570251638221307914&permissions=8&scope=bot)")
 .setFooter ("Crée par ⏳Gaétan");
 message.channel.send ({embed})
 }
