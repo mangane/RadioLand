@@ -203,7 +203,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
     message.reply("Pong! (Calcul en cours...)").then(m => m.edit(`${message.author}:ping_pong: Pong!__\n La latence actuelle est de ${m.createdTimestamp - message.createdTimestamp}ms__`) );
     message.react("✅");
   }
-	   if (command === "user-info")
+	   if (command === "user-info") { 
  const user = message.mentions.users.first ()
  const member = message.guild.member(user)
 
