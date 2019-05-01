@@ -233,6 +233,14 @@ const embed = new Discord.RichEmbed  ()
 .setTitle("Nous rejoindre");
 message.channel.send ({embed})
 }
+if (command === "help-bvn") {
+message.delete ()
+const embed = new Discord.RichEmbed  ()
+.setColor ("RANDOM")
+.setTitle("Utiliser les messages de Bienvenue")
+.setDescription("Nous avons simplifier au maximum les messages de bienvenue, il vous suffit de crée un salon nommer\``départ-arrivé`` !!!\n Bonne continuation  (__Le staff de DanPub__);
+message.channel.send ({embed })
+}
 
 	// fin de l'ajout
 
