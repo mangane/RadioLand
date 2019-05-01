@@ -215,8 +215,7 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":
         .addField('Il à rejoint le serveur le:', `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
         .addField('Status:', `${user.presence.status}`, true)
         .addField('Game:', `${user.presence.game ? user.presence.game.name : 'None'}`, true)
-        .addField('Roles:', member.roles.map(roles => `${roles.name}`).join(', '), true)
-        .setFooter(`Demandé par${message.author.username}`);
+        .setFooter(`Demandé par ${message.author.username}`);
     message.channel.send({embed})
 
 }
