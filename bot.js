@@ -117,7 +117,7 @@ client.on("message", async message => {
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
 }
-	if(command === "naissance add") {
+	if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
 		// supprime le premier mot de la chaine (string) donc "!pub machin" va supprimer pub
@@ -354,7 +354,7 @@ setTimeout(() => {
     
  };
 	
-  if(command === "pub") {
+  if(command === "nnaissance add") {
 		message.delete()
 		var amsg = message.content;
 		// supprime le premier mot de la chaine (string) donc "!pub machin" va supprimer pub
@@ -369,12 +369,12 @@ setTimeout(() => {
 			return message.channel.send ("Votre Demande doit contenir plus de 5 caractère");	
 		}
 		var reason = msg;
-		var test = message.guild.channels.find(`id`, "dans-ta-pub");
+		var test = message.guild.channels.find(`id`, "573340669465198602");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
 		.setTitle("Publicité")
-		.addField("Demande d'ajout de date de naissance  :", `${message.author}`)
+		.addField("Demande d'ajout de date de naissance  :", `${message.author.id}`)
 		.addField("Date de naissance  :", reason);
 		// envoie au channel courant
 		//message.channel.send({embed})
@@ -386,38 +386,5 @@ setTimeout(() => {
 	    } else {
 	        message.channel.send("je ne trouve pas le salon des demandes, merci de le signaler");
 	    }
- 
-	// fin de l'ajout
-
-	// ton ancien code un peu bordélique
-	/*
-	if(message.content.startsWith(prefix + "count")) {
-		message.delete ()
-		message.reply(`Nous sommes ${message.guild.memberCount} Sur RadioLand`);
-	}
-	if(message.content.startsWith(prefix + "stats")) {
-		message.delete()
-		const embed = new Discord.RichEmbed()
-		.setColor("#2e1fe6")gg
-		.setTitle("Statistiques")
-		.addField("Nombre de serveur :", client.guilds.size)
-		.addField("Nombre d'utilisateurs :", client.users.size);
-		message.channel.send({embed})
-	}
-	if(message.content.startsWith(prefix + `pub`)) {
-		message.delete()
-	if(message.size === 10)
-		return mesage.channel.send ("Votre publicité doit contenir plus de 10 caractère")
-		let rreason = args.join(" ").slice(28);
-		let reportEmbed = new Discord.RichEmbed()
-		.setDescription("Publicité")
-		.setColor("#15f153")
-		.addField("Publicité de :", `${message.author}`)
-		.addField("Publicité :", rreason);
-		let reportschannel = message.guild.channels.find(`name`, "💫pub-vip💫");
-	if(!reportschannel) return message.channel.send("je ne trouve pas le salon de Pub contacter un administrateur! ");
-		reportschannel.send(reportEmbed);
-	}
-	*/
   });
 client.login(process.env.BOT_TOKEN);
