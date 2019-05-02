@@ -379,7 +379,7 @@ setTimeout(() => {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		const channel = message.guild.channels.find(` 573340669465198602 ");// Find the channel ID "123456789"
+		const channel = message.guild.channels.find(`id`,"573340669465198602 ");// Find the channel ID "123456789"
 	    if(channel) { // Check if that channel exists
 	        channel.send({embed})
 		    message.channel.send ("Votre demande d'ajouter votre date de naissance est en cours de validation ");
