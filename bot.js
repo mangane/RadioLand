@@ -306,7 +306,7 @@ message.delete ()
 if(message.mentions.users.size === 0)
 			return message.channel.send("Vous avez oublié de mentionner une personne ");
 const ruse = message.mentions.users.first()
-message.channel.send (` ${message.author} Met une grosse baffe à `)then(async msg => {
+message.channel.send (` ${message.author} Met une grosse baffe à `).then(async msg => {
         setTimeout(() => {
             msg.edit('${message.author} Met une grosse baffe à 》');
         }, 1000);
