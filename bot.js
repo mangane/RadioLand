@@ -300,7 +300,7 @@ message.channel.send ({embed })
         }, 15000);
     });
     };
-	``` if (command === "couleurs") {
+	 if (command === "couleurs") {
 
   message.delete()
 
@@ -333,11 +333,11 @@ message.channel.send ({embed })
             msg.edit('Marrons🐎');
         }, 14000);
         setTimeout(() => {
-            msg.edit(`*J'ai fini de dire les couleurs `);
+            msg.edit(`*J'ai fini de dire les couleurs*`);
         }, 15000);
     });
     };
- ```
+ 
  
 	// fin de l'ajout
 
