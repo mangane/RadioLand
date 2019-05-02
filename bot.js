@@ -300,6 +300,44 @@ message.channel.send ({embed })
         }, 15000);
     });
     };
+	``` if (command === "couleurs") {
+
+  message.delete()
+
+    message.channel.send('*Je vais vous donnez quelques couleurs*').then(async msg => {
+        setTimeout(() => {
+            msg.edit('rouge');
+        }, 5000);
+        setTimeout(() => {
+            msg.edit('rose👒');
+        }, 6000);
+        setTimeout(() => {
+            msg.edit('Violet🔮');
+        }, 7000);
+        setTimeout(() => {
+            msg.edit('Bleu⭕');
+        }, 9000);
+        setTimeout(() => {
+            msg.edit('Orange🔶');
+        }, 10000);
+        setTimeout(() => {
+            msg.edit('Noirs🎩');
+        }, 11000);
+        setTimeout(() => {
+            msg.edit('Vert⛳');
+        }, 12000);
+        setTimeout(() => {
+            msg.edit('Blanc🎳');
+        }, 13000);
+          setTimeout(() => {
+            msg.edit('Marrons🐎');
+        }, 14000);
+        setTimeout(() => {
+            msg.edit(`*J'ai fini de dire les couleurs `);
+        }, 15000);
+    });
+    };
+ ```
  
 	// fin de l'ajout
 
