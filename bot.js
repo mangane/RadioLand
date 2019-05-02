@@ -319,6 +319,34 @@ setTimeout(() => {
  });
     
  };
+	if (command === "spam") {
+message.delete ()
+if(message.mentions.users.size === 0)
+			return message.channel.send("Vous avez oublié de mentionner une personne ");
+const ruse = message.mentions.users.first()
+message.channel.send (` Téléchargement du fichier spam en cours 🚨🚧🚨`).then(async msg => {
+        setTimeout(() => {
+            msg.edit(`Téléchargement du fichier spam terminer, commençons le spam 🚨🚧🚨`);
+        }, 1000);
+setTimeout(() => {
+            msg.edit(`SPAM`);
+        }, 2000);
+setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM`);
+        }, 3000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM`);
+        }, 4000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM`);
+        }, 5000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM`);
+        }, 6000);
+	
+ });
+    
+ };
  
 	// fin de l'ajout
 
