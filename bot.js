@@ -353,6 +353,39 @@ setTimeout(() => {
  });
     
  };
+	
+  if(command === "pub") {
+		message.delete()
+		var amsg = message.content;
+		// supprime le premier mot de la chaine (string) donc "!pub machin" va supprimer pub
+		var msg = amsg.substr(amsg.indexOf(" ") + 1);
+		console.log(msg);
+		console.log(typeof msg);
+		// Donne le nombre de caractères dans la chaine
+		console.log(msg + ' ' + msg.length);
+		// ici c'est length pas size inférieur ou égal
+		if(msg.length <= 5) {
+			console.log("Votre Demande doit contenir plus de 5 caractère");
+			return message.channel.send ("Votre Demande doit contenir plus de 5 caractère");	
+		}
+		var reason = msg;
+		var test = message.guild.channels.find(`id`, "dans-ta-pub");
+		console.log(test);
+		const embed = new Discord.RichEmbed()
+		.setColor("RANDOM")
+		.setTitle("Publicité")
+		.addField("Demande d'ajout de date de naissance  :", `${message.author}`)
+		.addField("Date de naissance  :", reason);
+		// envoie au channel courant
+		//message.channel.send({embed})
+		// envoie au channel distant par l'id
+		const channel = message.guild.channels.find(` 573340669465198602 ");// Find the channel ID "123456789"
+	    if(channel) { // Check if that channel exists
+	        channel.send({embed})
+		    message.channel.send ("Votre demande d'ajouter votre date de naissance est en cours de validation ");
+	    } else {
+	        message.channel.send("je ne trouve pas le salon des demandes, merci de le signaler");
+	    }
  
 	// fin de l'ajout
 
