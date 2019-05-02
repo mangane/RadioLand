@@ -387,5 +387,24 @@ setTimeout(() => {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	    }
 }
+	if (command === "anniv") {
+message.delete ()
+const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setTitle("Calendrier des dates de naissance des utilisateurs")
+.addField("Janvier :","None")
+.addField ("Fevrier :","None")
+.addField ('"Mars :","None")
+.addField ("Avril :","None")
+.addField("Mai :","None")
+.addField("Juin :","None")
+.addField("Juillet :","<@516274923828805667> le 15")
+.addField ("Août :","None")
+.addField("Septembre :","None)
+.addField ("Octobre :","None")
+.addField("Novembre :","None")
+.addField ("Décembre :","None");
+message.channel.send ({embed})
+}
   });
 client.login(process.env.BOT_TOKEN);
