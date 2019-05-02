@@ -373,7 +373,6 @@ setTimeout(() => {
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
-		.setTitle("Publicité")
 		.addField("Demande d'ajout de date de naissance  :", `${message.author.id}`)
 		.addField("Date de naissance  :", reason);
 		// envoie au channel courant
