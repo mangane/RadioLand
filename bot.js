@@ -314,7 +314,7 @@ setTimeout(() => {
             msg.edit(`${message.author} Met une grosse baffe à 》》`);
         }, 2000);
 setTimeout(() => {
-            msg.edit(`${message.author} Met une grosse baffe à 》》》 ${ruse}`).then(message => {message.delete(5000)});
+            msg.edit(`${message.author} Met une grosse baffe à 》》》 ${ruse}`);
         }, 3000);
  });
     
@@ -331,7 +331,7 @@ setTimeout(() => {
 	if(message.content.startsWith(prefix + "stats")) {
 		message.delete()
 		const embed = new Discord.RichEmbed()
-		.setColor("#2e1fe6")
+		.setColor("#2e1fe6")gg
 		.setTitle("Statistiques")
 		.addField("Nombre de serveur :", client.guilds.size)
 		.addField("Nombre d'utilisateurs :", client.users.size);
