@@ -383,6 +383,9 @@ setTimeout(() => {
 	    if(channel) { // Check if that channel exists
 	        channel.send({embed})
 		    message.channel.send ("Votre demande d'ajouter votre date de naissance est en cours de validation ");
+	      } else {
+	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	    }
+}
   });
 client.login(process.env.BOT_TOKEN);
