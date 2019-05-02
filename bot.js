@@ -193,7 +193,7 @@ const embed = new Discord.RichEmbed()
 .setDescription("Prefix .")
 .addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite\\user-info\\dons\\support\\help-bvn``")
 .addField ("Commande modération :","``kick\\ban\\purge``")
-.addField ("Commande Fun :","``fume\\slap``");
+.addField ("Commande Fun :","``fume\\slap\\spam``");
 message.channel.send ({embed})
 }
 	if(command === "invite") {
@@ -324,22 +324,31 @@ message.delete ()
 message.channel.send (` Téléchargement du fichier spam en cours 🚨🚧🚨`).then(async msg => {
         setTimeout(() => {
             msg.edit(`Téléchargement du fichier spam terminer, commençons le spam 🚨🚧🚨`);
-        }, 1000);
+        }, 3000);
 setTimeout(() => {
             msg.edit(`SPAM`);
-        }, 2000);
+        }, 4000);
 setTimeout(() => {
             msg.edit(`SPAM SPAM SPAM`);
-        }, 3000);
+        }, 5000);
 	setTimeout(() => {
             msg.edit(`SPAM SPAM SPAM SPAM`);
-        }, 4000);
+        }, 6000);
 	setTimeout(() => {
             msg.edit(`SPAM SPAM SPAM SPAM SPAM`);
         }, 5000);
 	setTimeout(() => {
             msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM`);
-        }, 6000);
+        }, 7000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM `);
+        }, 7000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM `);
+        }, 7000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM `).then(message => {message.delete(20000)});
+        }, 7000);
 	
  });
     
