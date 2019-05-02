@@ -369,7 +369,7 @@ setTimeout(() => {
 			return message.channel.send ("Votre Demande doit contenir plus de 5 caractère");	
 		}
 		var reason = msg;
-		var test = message.guild.channels.find(`id`, "573340669465198602");
+		var test = client.channels.find(`id`, "573340669465198602");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
