@@ -298,7 +298,7 @@ if (command === "fume") {
         setTimeout(() => {
             msg.edit(`*J'ai fini de fumer*`);
         }, 15000);
-    }
+    
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
