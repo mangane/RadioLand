@@ -252,6 +252,55 @@ const embed = new Discord.RichEmbed  ()
 .setDescription("Nous avons simplifier au maximum les messages de bienvenue, il vous suffit de crée un salon nommer\``départ-arrivé`` !!!\n Bonne continuation\n__Le staff de DanPub__");
 message.channel.send ({embed })
 }
+	if (command === "fume") {
+  message.delete()
+
+    message.channel.send('*Je vais aller fumer*').then(async msg => {
+        setTimeout(() => {
+            msg.edit('🚬');
+        }, 1000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁ ');
+        }, 2000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁ ');
+        }, 3000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁☁ ');
+        }, 4000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁');
+        }, 5000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁');
+        }, 6000);
+        setTimeout(() => {
+            msg.edit('🚬');
+        }, 7000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁ ');
+        }, 9000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁ ');
+        }, 10000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁☁ ');
+        }, 11000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁');
+        }, 12000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁');
+        }, 13000);
+          setTimeout(() => {
+            msg.edit('🚬');
+        }, 14000);
+        setTimeout(() => {
+            msg.edit(`*J'ai fini de fumer*`);
+        }, 15000);
+    });
+    };
+ 
 	// fin de l'ajout
 
 	// ton ancien code un peu bordélique
