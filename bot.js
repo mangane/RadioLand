@@ -252,8 +252,7 @@ const embed = new Discord.RichEmbed  ()
 .setDescription("Nous avons simplifier au maximum les messages de bienvenue, il vous suffit de crée un salon nommer\``départ-arrivé`` !!!\n Bonne continuation\n__Le staff de DanPub__");
 message.channel.send ({embed })
 }
-const Discord = require("discord.js")
-exports.run = async (client, message, level) => {
+if (command === "fume") {
   message.delete()
 
     message.channel.send('*Je vais aller fumer*').then(async msg => {
