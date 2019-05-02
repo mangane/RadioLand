@@ -321,9 +321,6 @@ setTimeout(() => {
  };
 	if (command === "spam") {
 message.delete ()
-if(message.mentions.users.size === 0)
-			return message.channel.send("Vous avez oublié de mentionner une personne ");
-const ruse = message.mentions.users.first()
 message.channel.send (` Téléchargement du fichier spam en cours 🚨🚧🚨`).then(async msg => {
         setTimeout(() => {
             msg.edit(`Téléchargement du fichier spam terminer, commençons le spam 🚨🚧🚨`);
