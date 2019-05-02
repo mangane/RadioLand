@@ -308,13 +308,13 @@ if(message.mentions.users.size === 0)
 const ruse = message.mentions.users.first()
 message.channel.send (` ${message.author} Met une grosse baffe à `).then(async msg => {
         setTimeout(() => {
-            msg.edit('${message.author} Met une grosse baffe à 》');
+            msg.edit(`${message.author.username} Met une grosse baffe à 》`);
         }, 1000);
 setTimeout(() => {
-            msg.edit('${message.author} Met une grosse baffe à 》》');
+            msg.edit(`${message.author} Met une grosse baffe à 》》`);
         }, 2000);
 setTimeout(() => {
-            msg.edit('${message.author} Met une grosse baffe à 》》》 ${ruse}').then(message => {message.delete(5000)});
+            msg.edit(`${message.author} Met une grosse baffe à 》》》 ${ruse}`).then(message => {message.delete(5000)});
         }, 3000);
 	setTimeout(() => {
 	message.channel.send (`${message.author} met une grosse baffe à 》》》${ruse}`);
