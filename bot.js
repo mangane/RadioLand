@@ -400,7 +400,7 @@ const embed = new Discord.RichEmbed()
 .addField("Juin :","None")
 .addField("Juillet :","<@516274923828805667> le 15")
 .addField ("Août :","None")
-.addField("Septembre :","None)
+.addField("Septembre :","None")
 .addField ("Octobre :","None")
 .addField("Novembre :","None")
 .addField ("Décembre :","None");
