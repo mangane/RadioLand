@@ -403,7 +403,8 @@ const embed = new Discord.RichEmbed()
 .addField("Septembre :","None")
 .addField ("Octobre :","None")
 .addField("Novembre :","None")
-.addField ("Décembre :","None");
+.addField ("Décembre :","None")
+.setFooter("Pour demander l'ajout de votre date de naissance faite .naissance-add (date)");
 message.channel.send ({embed})
 }
   });
