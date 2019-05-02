@@ -316,8 +316,9 @@ setTimeout(() => {
 setTimeout(() => {
             msg.edit('${message.author} Met une grosse baffe à 》》》 ${ruse}').then(message => {message.delete(5000)});
         }, 3000);
+	message.channel.send (`${message.author} met une grosse baffe à 》》》${ruse}`);
  });
-    message.channel.send (`${message.author} met une grosse baffe à 》》》${ruse}`);
+    
  };
  
 	// fin de l'ajout
