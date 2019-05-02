@@ -306,35 +306,35 @@ message.channel.send ({embed })
 
     message.channel.send('*Je vais vous donnez quelques couleurs*').then(async msg => {
         setTimeout(() => {
-            msg.edit('rouge');
-        }, 5000);
+            msg.edit('rouge😈');
+        }, 10000);
         setTimeout(() => {
             msg.edit('rose👒');
-        }, 6000);
+        }, 10000);
         setTimeout(() => {
             msg.edit('Violet🔮');
-        }, 7000);
+        }, 10000);
         setTimeout(() => {
             msg.edit('Bleu⭕');
-        }, 9000);
+        }, 10000);
         setTimeout(() => {
             msg.edit('Orange🔶');
         }, 10000);
         setTimeout(() => {
             msg.edit('Noirs🎩');
-        }, 11000);
+        }, 10000);
         setTimeout(() => {
             msg.edit('Vert⛳');
-        }, 12000);
+        }, 10000);
         setTimeout(() => {
             msg.edit('Blanc🎳');
-        }, 13000);
+        }, 10000);
           setTimeout(() => {
             msg.edit('Marrons🐎');
-        }, 14000);
+        }, 10000);
         setTimeout(() => {
             msg.edit(`*J'ai fini de dire les couleurs*`);
-        }, 15000);
+        }, 10000);
     });
     };
  
