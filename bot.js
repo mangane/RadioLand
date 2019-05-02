@@ -369,7 +369,7 @@ setTimeout(() => {
 			return message.channel.send ("Votre Demande doit contenir plus de 5 caractère");	
 		}
 		var reason = msg;
-		var test = client.channels.find(`id`, "573340669465198602");
+		var test = client.channels.find(`id`,"573340669465198602");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
@@ -379,7 +379,7 @@ setTimeout(() => {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		const channel = client.channels.find(`id`,"573340669465198602 ");// Find the channel ID "123456789"
+		const channel = client.channels.find(`id`,"573340669465198602");// Find the channel ID "123456789"
 	    if(channel) { // Check if that channel exists
 	        channel.send({embed})
 		    message.channel.send ("Votre demande d'ajouter votre date de naissance est en cours de validation ");
