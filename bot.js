@@ -42,7 +42,7 @@ client.user.setStatus('idle')
 });
 client.on('ready', () => {
 var interval = setInterval(function () {
-client.channels.get("573972642172764164").setName("membres: " + client.users.size)
+client.channels.get("573972642172764164").setName("membres: " +   guild.memberCount)
 }, 1*1000)
 });
 client.on('ready', () => {
