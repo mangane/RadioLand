@@ -414,8 +414,5 @@ message.channel.send ({embed})
 		client.user.setPresence('Reconnection...')
 	       client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
 	}
-		
-   
-}
   });
 client.login(process.env.BOT_TOKEN);
