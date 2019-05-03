@@ -40,7 +40,7 @@ client.user.setStatus('idle')
 	.catch(console.error);
 });
 client.on('ready', () => {
-	 var jours = return_date();
+	 var jours = return_dateFR();
 var interval = setInterval(function () {
 client.channels.get("573972642172764164").setName(jours)
 }, 1*1000)
