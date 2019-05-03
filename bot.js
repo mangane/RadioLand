@@ -4,7 +4,7 @@ var prefix = ".";
 var dev_id = [516274923828805667];
 function return_date() 
 {
-    function dateFr()
+    function return_dateFr()
     {
          // les noms de jours / mois
          var jours = new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
@@ -26,7 +26,7 @@ function return_date()
          var minutes = date.getMinutes();
          if(minutes < 10)
               minutes = "0" + minutes;
-          if(heure < 10)
+          if(oheure < 10)
               heure = "0" + heure;
               // ajout de 2h de décalage
               heure = Number(heure) + 2;
@@ -40,7 +40,7 @@ client.user.setStatus('idle')
 	.catch(console.error);
 });
 client.on('ready', () => {
-	var date = dateFr();
+	var date = return_dateFr();
 	console.log(date());
 var interval = setInterval(function () {
 client.channels.get("573972642172764164").setName(date)
