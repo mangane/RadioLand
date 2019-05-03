@@ -72,14 +72,14 @@ client.on('ready', () => {
 	var date = return_dateFr();
 var interval = setInterval(function () {
 client.channels.get("573972642172764164").setName(date)
-}, 1*1000)
+}, 1*500)
 });
 client.on('ready', () => {
 	console.log(heure());
 	var date = heure();
 var interval = setInterval(function () {
 client.channels.get("573990356132036638").setName(date)
-}, 1*1000)
+}, 1*500)
 });
 client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
