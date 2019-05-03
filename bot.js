@@ -36,7 +36,7 @@ function return_date()
     return dateFr() + ' il est ' + heure();
 }
 client.on('ready', () => {
-client.user.setStatus('idle')
+client.user.setStatus('RECONNECTING')
 	.then(console.log)
 	.catch(console.error);
 });
