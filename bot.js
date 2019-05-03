@@ -7,8 +7,8 @@ function return_date()
     function dateFr()
     {
          // les noms de jours / mois
-         var jours = new Array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi");
-         var mois = new Array("janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre");
+         var jours = new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
+         var mois = new Array("Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre");
          // on recupere la date
          var date = new Date();
          // on construit le message
@@ -24,14 +24,13 @@ function return_date()
          var date = new Date();
          var heure = date.getHours();
          var minutes = date.getMinutes();
-         var millisec = date.getMilliseconds();
          if(minutes < 10)
               minutes = "0" + minutes;
           if(heure < 10)
               heure = "0" + heure;
               // ajout de 2h de décalage
               heure = Number(heure) + 2;
-         return heure + "h" + minutes + " et " + millisec + " millisecondes";
+         return heure + "h" + minutes;
     }
     return dateFr() + ' il est ' + heure();
 }
