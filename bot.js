@@ -31,6 +31,7 @@ function return_date()
               // ajout de 2h de décalage
               heure = Number(heure) + 2;
          return heure + "h" + minutes;
+	    
     }
     return dateFr() + ' il est ' + heure();
 }
@@ -48,6 +49,19 @@ function return_dateFr()
          message += date.getFullYear();
          return message;
     }
+function heure()
+    {
+         var date = new Date();
+         var heure = date.getHours();
+         var minutes = date.getMinutes();
+         if(minutes < 10)
+              minutes = "0" + minutes;
+          if(oheure < 10)
+              heure = "0" + heure;
+              // ajout de 2h de décalage
+              heure = Number(heure) + 2;
+         return heure + "h" + minutes;
+	    }
 client.on('ready', () => {
 client.user.setStatus('idle')
 	.then(console.log)
@@ -58,6 +72,13 @@ client.on('ready', () => {
 	var date = return_dateFr();
 var interval = setInterval(function () {
 client.channels.get("573972642172764164").setName(date)
+}, 1*1000)
+});
+client.on('ready', () => {
+	console.log(heure());
+	var date = heure();
+var interval = setInterval(function () {
+client.channels.get("573990356132036638").setName(date)
 }, 1*1000)
 });
 client.on('ready', () => {
