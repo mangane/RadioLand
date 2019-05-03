@@ -45,7 +45,7 @@ client.on('ready', () => {
 	var date = heure();
 var interval = setInterval(function () {
 client.channels.get("573990356132036638").setName(date)
-}, 1000)
+}, 1*1000)
 });
 client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
