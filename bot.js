@@ -36,7 +36,7 @@ function return_date()
     return dateFr() + ' il est ' + heure();
 }
 client.on('ready', () => {
-client.user.setStatus('NEARLY')
+client.user.setStatus('idle')
 	.then(console.log)
 	.catch(console.error);
 });
@@ -410,14 +410,10 @@ message.channel.send ({embed})
 	if(command === "reboot") {
    message.delete()
 		client.user.setStatus('RECONNECTING')
-		client.user.setPresence('Reconnection...')
+		client.user.setActivity('Reconnection...')
 		setTimeout(() => {
             message.channel.send(`J'ai bien redémarrer !`);
         }, 7000)
-		setTimeout(() => {
-            message.channel.send(`J'ai bien redémarrer !`)
-	client.user.setStatus('RECONNECTING');
-        }, 8000)
 	.then(console.log)
 	.catch(console.error);
 	}
