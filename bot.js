@@ -42,7 +42,7 @@ client.user.setStatus('idle')
 });
 client.on('ready', () => {
 var interval = setInterval(function () {
-client.channels.get("idDuChannel").setName("membres: " + client.users.size)
+client.channels.get("573972642172764164").setName("membres: " + client.users.size)
 }, 1*1000)
 client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
