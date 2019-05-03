@@ -411,7 +411,6 @@ message.channel.send ({embed})
    message.delete()
 		client.user.setStatus('RECONNECTING')
 		client.user.setPresence('Reconnection...')
-		client.user.setStatus('READY')
 	.then(console.log)
 	.catch(console.error);
 	}
