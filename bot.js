@@ -407,8 +407,9 @@ const embed = new Discord.RichEmbed()
 .setFooter("Pour demander l'ajout de votre date de naissance faite .naissance-add (date)");
 message.channel.send ({embed})
 }
-	if(command === "reboot") & dev_id.indexOf(message.author.id) != -1) {
+	if(command === "reboot") {
     message.delete()
+		if(!dev_id.indexOf(message.author.id) != -1) return message.channel.send('vous n\'avez pas la permission')
 		client.user.setStatus('RECONNECTING')
 		client.user.setPresence('Reconnection...')
 	       client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
