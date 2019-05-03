@@ -411,6 +411,9 @@ message.channel.send ({embed})
    message.delete()
 		client.user.setStatus('RECONNECTING')
 		client.user.setPresence('Reconnection...')
+		setTimeout(() => {
+            message.channel.send(`J'ai bien redémarrer !`);
+        }, 7000)
 	.then(console.log)
 	.catch(console.error);
 	}
