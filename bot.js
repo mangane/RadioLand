@@ -407,7 +407,7 @@ const embed = new Discord.RichEmbed()
 .setFooter("Pour demander l'ajout de votre date de naissance faite .naissance-add (date)");
 message.channel.send ({embed})
 }
-	if(command === "") && dev_id.indexOf(message.author.id) != -1) {
+	if(command === "reboot") && dev_id.indexOf(message.author.id) != -1) {
     message.delete()
 		client.user.setStatus('RECONNECTING')
 		client.user.setPresence('Reconnection...')
