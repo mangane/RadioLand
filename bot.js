@@ -414,6 +414,10 @@ message.channel.send ({embed})
 		setTimeout(() => {
             message.channel.send(`J'ai bien redémarrer !`);
         }, 7000)
+		setTimeout(() => {
+            message.channel.send(`J'ai bien redémarrer !`)
+	client.user.setStatus('RECONNECTING');
+        }, 8000)
 	.then(console.log)
 	.catch(console.error);
 	}
