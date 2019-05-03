@@ -415,7 +415,7 @@ message.channel.send ({embed})
             message.channel.send(`J'ai bien redémarrer !`);
         }, 7000)
 		setTimeout(() => {
-          client.user.setStatus('online')
+          client.user.setStatus('idle')
 			.then(console.log)
 	.catch(console.error)
         }, 10000)
