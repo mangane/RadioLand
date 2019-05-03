@@ -35,33 +35,6 @@ function return_date()
     }
     return dateFr() + ' il est ' + heure();
 }
-function return_dateFr()
-    {
-         // les noms de jours / mois
-         var jours = new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
-         var mois = new Array("Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre");
-         // on recupere la date
-         var date = new Date();
-         // on construit le message
-         var message = jours[date.getDay()] + " ";   // nom du jour
-         message += date.getDate() + " ";   // numero du jour
-         message += mois[date.getMonth()] + " ";   // mois
-         message += date.getFullYear();
-         return message;
-    }
-function heure()
-    {
-         var date = new Date();
-         var heure = date.getHours();
-         var minutes = date.getMinutes();
-         if(minutes < 10)
-              minutes = "0" + minutes;
-          if(heure < 10)
-              heure = "0" + heure;
-              // ajout de 2h de décalage
-              heure = Number(heure) + 2;
-         return heure + "h" + minutes;
-	    }
 client.on('ready', () => {
 client.user.setStatus('idle')
 	.then(console.log)
