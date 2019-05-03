@@ -407,18 +407,12 @@ const embed = new Discord.RichEmbed()
 .setFooter("Pour demander l'ajout de votre date de naissance faite .naissance-add (date)");
 message.channel.send ({embed})
 }
-	//if(command === "reboot") {
-   // message.delete()
-		//if(dev_id.indexOf(message.author.id) != -1) return message.channel.send('vous n\'avez pas la permission')
-		//client.user.setStatus('RECONNECTING')
-		//client.user.setPresence('Reconnection...')
-	//}
-	if(command === "reboot") && dev_id.indexOf(message.author.id) != -1) {
-    message.delete()
-	 client.user.setStatus('invisible')
-	message.reply("je me reconnecte")
-    message.delete()
-	client.user.setStatus(`idle`);
-}
+	if(command === "reboot") {
+   message.delete()
+		if(dev_id.indexOf(message.author.id) != -1) return message.channel.send('vous n\'avez pas la permission')
+		client.user.setStatus('RECONNECTING')
+		client.user.setPresence('Reconnection...')
+	}
+	
   });
 client.login(process.env.BOT_TOKEN);
