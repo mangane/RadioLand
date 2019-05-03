@@ -409,7 +409,7 @@ message.channel.send ({embed})
 }
 	if(command === "reboot") {
    message.delete()
-		client.user.setStatus('RECONNECTING')
+		client.user.setStatus('invisible')
 		client.user.setActivity('Reconnection...')
 		setTimeout(() => {
             message.channel.send(`J'ai bien redémarrer !`);
