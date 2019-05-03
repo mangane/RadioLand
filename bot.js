@@ -29,7 +29,7 @@ function return_date()
           if(heure < 10)
               heure = "0" + heure;
               // ajout de 2h de décalage
-              heure = Number(heure) + 3;
+              heure = Number(heure) + 2;
          return heure + "h" + minutes;
 	    
     }
@@ -72,14 +72,14 @@ client.on('ready', () => {
 	var date = return_dateFr();
 var interval = setInterval(function () {
 client.channels.get("573972642172764164").setName(date)
-}, 500)
+}, 1000)
 });
 client.on('ready', () => {
 	console.log(heure());
 	var date = heure();
 var interval = setInterval(function () {
 client.channels.get("573990356132036638").setName(date)
-}, 500)
+}, 1000)
 });
 client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
