@@ -26,7 +26,7 @@ function return_date()
          var minutes = date.getMinutes();
          if(minutes < 10)
               minutes = "0" + minutes;
-          if(oheure < 10)
+          if(heure < 10)
               heure = "0" + heure;
               // ajout de 2h de décalage
               heure = Number(heure) + 2;
@@ -56,7 +56,7 @@ function heure()
          var minutes = date.getMinutes();
          if(minutes < 10)
               minutes = "0" + minutes;
-          if(oheure < 10)
+          if(heure < 10)
               heure = "0" + heure;
               // ajout de 2h de décalage
               heure = Number(heure) + 2;
