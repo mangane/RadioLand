@@ -417,8 +417,7 @@ message.channel.send ({embed})
 		setTimeout(() => {
           client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } })
 			.then(console.log)
-	.catch(console.error);
-	}
+	.catch(console.error)
         }, 10000)
 	.then(console.log)
 	.catch(console.error);
