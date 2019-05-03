@@ -415,7 +415,6 @@ message.channel.send ({embed})
 		client.user.setStatus('READY');
 			.then(console.log)
 	.catch(console.error);
-});
 	}
 	
   });
