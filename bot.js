@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
+var dev_id = [516274923828805667];
 function return_date() 
 {
     function dateFr()
@@ -405,6 +406,15 @@ const embed = new Discord.RichEmbed()
 .addField ("Décembre :","None")
 .setFooter("Pour demander l'ajout de votre date de naissance faite .naissance-add (date)");
 message.channel.send ({embed})
+}
+	if(command === "") && dev_id.indexOf(message.author.id) != -1) {
+    message.delete()
+		client.user.setStatus('RECONNECTING')
+		client.user.setPresence('Reconnection...')
+	       client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
+	}
+		
+   
 }
   });
 client.login(process.env.BOT_TOKEN);
