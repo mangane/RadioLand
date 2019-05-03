@@ -413,7 +413,7 @@ message.channel.send ({embed})
 		//client.user.setStatus('RECONNECTING')
 		//client.user.setPresence('Reconnection...')
 	//}
-	if(message.content.startsWith(prefix + "reboot") && dev_id.indexOf(message.author.id) != -1) {
+	if(command === "reboot") && dev_id.indexOf(message.author.id) != -1) {
     message.delete()
 	 client.user.setStatus('invisible')
 	message.reply("je me reconnecte")
