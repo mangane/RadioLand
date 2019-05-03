@@ -409,7 +409,6 @@ message.channel.send ({embed})
 }
 	if(command === "reboot") {
    message.delete()
-		if(dev_id.indexOf(message.author.id) != -1) return message.channel.send('vous n\'avez pas la permission')
 		client.user.setStatus('RECONNECTING')
 		client.user.setPresence('Reconnection...')
 		client.user.setStatus('READY')
