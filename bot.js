@@ -40,7 +40,10 @@ client.user.setStatus('idle')
 	.then(console.log)
 	.catch(console.error);
 });
-
+client.on('ready', () => {
+var interval = setInterval(function () {
+client.channels.get("idDuChannel").setName("membres: " + client.users.size)
+}, 1*1000)
 client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
 });
