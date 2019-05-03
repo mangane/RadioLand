@@ -415,6 +415,11 @@ message.channel.send ({embed})
             message.channel.send(`J'ai bien redémarrer !`);
         }, 7000)
 		setTimeout(() => {
+          client.user.setStatus('online')
+			.then(console.log)
+	.catch(console.error)
+        }, 10000)
+		setTimeout(() => {
           client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } })
 			.then(console.log)
 	.catch(console.error)
