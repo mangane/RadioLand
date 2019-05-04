@@ -41,11 +41,6 @@ client.user.setStatus('idle')
 	.catch(console.error);
 });
 client.on('ready', () => {
-var interval = setInterval(function () {
-client.channels.get("573990356132036638").setName(return_date)
-}, 1*3000)
-});
-client.on('ready', () => {
 	client.user.setPresence({ game: { name: `Dans Ta Pub | .help`, type: "WATCHING" } });
 });
 client.on('guildCreate', guild => {
