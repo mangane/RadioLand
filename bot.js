@@ -437,5 +437,10 @@ message.channel.send ({embed})
 	.then(console.log)
 	.catch(console.error);
 	}
+	if (command === "coming") {
+message.channel.send ("Coming soon for V1.5 (il est " + dateFr)
+var interval = setInterval(function () {
+message.edit("Coming soon for V1.5 (il est " + dateFr)
+}, 1*5000)
   });
 client.login(process.env.BOT_TOKEN);
