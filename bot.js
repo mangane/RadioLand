@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
-const cooldown = new Set ();
 var dev_id = [516274923828805667];
 function return_date() 
 {
@@ -110,6 +109,7 @@ client.on("message", async message => {
 		message.reply(`Nous sommes ${message.guild.memberCount} Sur ${message.guild.name}`).then(message => {message.delete(5000)});
 	}
 	if (cooldown.has(message.author.id)) { 
+		const cooldown = new Set ();
     message.channel.send("Merci de patientez !");
 }                
 else {
@@ -128,6 +128,7 @@ setTimeout(() => {
 }, 5000); 
  }
 	if (cooldown.has(message.author.id)) { 
+		const cooldown = new Set ();
     message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
 }                
 else {
