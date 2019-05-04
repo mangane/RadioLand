@@ -110,10 +110,6 @@ client.on("message", async message => {
 		message.delete();
 		message.reply(`Nous sommes ${message.guild.memberCount} Sur ${message.guild.name}`).then(message => {message.delete(5000)});
 	}
-	if (cooldown1.has(message.author.id)) { 
-    message.channel.send("Merci de patientez !");
-}                
-else {
 if(command === "stats") {
 		message.delete()
 		const embed = new Discord.RichEmbed()
@@ -123,11 +119,6 @@ if(command === "stats") {
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
 }
-cooldown1.add(message.author.id);
-setTimeout(() => { 
-    cooldown1.delete(message.author.id);
-}, 5000); 
- }
 	if (cooldown2.has(message.author.id)) { 
     message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
 }                
