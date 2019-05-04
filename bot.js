@@ -180,36 +180,12 @@ if(command === "pub") {
 			console.log("Votre publicité doit contenir plus de 30 caractère");
 			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
 		}
-		var reason = msg;
-		var test = message.guild.channels.find(`name`, "dans-ta-pub");
-		console.log(test);
-		const embed = new Discord.RichEmbed()
-		.setColor("RANDOM")
-		.setTitle("Publicité")
-		.addField("Publicité de :", `${message.author}`)
-		.addField("Publicité :", reason);
-		// envoie au channel courant
-		//message.channel.send({embed})
-		// envoie au channel distant par l'id
-		const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
-	    if(channel) { // Check if that channel exists
-	        channel.send({embed})
-		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
-	    } else {
-	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
-	    }
-	}
+		
 cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id);
 }, 7200000); 
  }
-	
-cooldown.add(message.author.id);
-setTimeout(() => { 
-    cooldown.delete(message.author.id);
-}, 7200000); 
-}
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
