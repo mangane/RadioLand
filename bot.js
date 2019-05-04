@@ -138,7 +138,7 @@ if(command === "pub") {
 			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
 		}
 		var reason = msg;
-		var test = bot.channels.findAll`name`, "dans-ta-pub");
+		var test = message.guild.channels.find(`name`, "dans-ta-pub");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
