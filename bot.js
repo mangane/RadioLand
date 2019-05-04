@@ -439,8 +439,8 @@ message.channel.send ({embed})
 	}
 	if (command === "coming") {
 message.channel.send ("Coming soon for V1.5 (il est " + return_dateFr)
-var interval = setInterval(function () {
-message.edit("Coming soon for V1.5 (il est " + return_dateFr)
+setTimeout(() => {
+	message.edit("Coming soon for V1.5 (il est " + return_dateFr)
 }, 1*5000)
 }
   });
