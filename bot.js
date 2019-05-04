@@ -167,7 +167,6 @@ cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id);
 }, 7200000); 
- }.
 }
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
