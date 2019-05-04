@@ -168,7 +168,7 @@ if(command === "pub") {
 	cool.add(message.author.id);
 setTimeout(() => { 
     cool.delete(message.author.id);
-}, 10000); 
+}, 7200000); 
  }
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
