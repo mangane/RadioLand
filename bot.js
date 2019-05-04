@@ -42,7 +42,7 @@ client.user.setStatus('idle')
 });
 client.on('ready', () => {
 	var date = return_date();
-var interval = setInterval(function () {
+ setInterval(function () {
 	console.log(return_date());
 client.channels.get("573990356132036638").setName(date)
 }, 1*60000)
