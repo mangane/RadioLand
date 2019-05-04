@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
+var cooldown = new Set ();
 var dev_id = [516274923828805667];
 function return_date() 
 {
