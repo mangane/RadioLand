@@ -126,7 +126,7 @@ cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id);
 }, 5000); 
- 
+ }
 	if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
