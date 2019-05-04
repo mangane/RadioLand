@@ -148,7 +148,7 @@ if(command === "pub") {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		const channel = message.guild.channels.findAll(`name`,"dans-ta-pub");// Find the channel ID "123456789"
+		const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
 	    if(channel) { // Check if that channel exists
 	        channel.send({embed})
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
