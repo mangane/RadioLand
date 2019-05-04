@@ -138,7 +138,7 @@ if(command === "pub") {
 			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
 		}
 		var reason = msg;
-		var test = message.guild.channels.find(`name`, "dans-ta-pub");
+		var test = bot.channels.findAll`name`, "dans-ta-pub");
 		console.log(test);
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
@@ -148,7 +148,7 @@ if(command === "pub") {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		const channel = bot.channels.findAll(`name`,"dans-ta-pub");// Find the channel ID "123456789"
+		const channel = bot.channels.getAll(`name`,"dans-ta-pub");// Find the channel ID "123456789"
 	    if(channel) { // Check if that channel exists
 	        channel.send({embed})
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
