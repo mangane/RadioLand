@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
 const cooldown = new Set ();
+const cool = new Set ();
 var dev_id = [516274923828805667];
 function return_date() 
 {
@@ -127,7 +128,7 @@ setTimeout(() => {
     cooldown.delete(message.author.id);
 }, 5000); 
  }
-	if (cooldown.has(message.author.id)) { 
+	if (cool.has(message.author.id)) { 
     message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
 }                
 else {
@@ -163,9 +164,10 @@ if(command === "pub") {
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	    }
-	cooldown.add(message.author.id);
+	
+	cool.add(message.author.id);
 setTimeout(() => { 
-    cooldown.delete(message.author.id);
+    cool.delete(message.author.id);
 }, 10000); 
  }
 	if (command === "help") {
