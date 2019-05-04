@@ -163,6 +163,11 @@ if(command === "pub") {
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	    }
+	cooldown.add(message.author.id);
+setTimeout(() => { 
+    cooldown.delete(message.author.id);
+}, 7200000); 
+ }
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
