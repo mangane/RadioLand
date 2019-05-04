@@ -108,7 +108,11 @@ client.on("message", async message => {
 		message.delete();
 		message.reply(`Nous sommes ${message.guild.memberCount} Sur ${message.guild.name}`).then(message => {message.delete(5000)});
 	}
-	if(command === "stats") {
+	if (cooldown.has(message.author.id)) { 
+    message.channel.send("Merci de patientez !");
+}                
+else {
+if(command === "stats") {
 		message.delete()
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
@@ -117,6 +121,11 @@ client.on("message", async message => {
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
 }
+cooldown.add(message.author.id);
+setTimeout(() => { 
+    cooldown.delete(message.author.id);
+}, 5000); 
+ 
 	if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
