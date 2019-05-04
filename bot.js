@@ -148,9 +148,9 @@ if(command === "pub") {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
+		const channel = message.guild.channels.findAll(`name`,"dans-ta-pub");// Find the channel ID "123456789"
 	    if(channel) { // Check if that channel exists
-	        channel.send({embed})
+	        channel.send({embed}).map(channel => channel.send(embed))
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
@@ -437,24 +437,5 @@ message.channel.send ({embed})
 	.then(console.log)
 	.catch(console.error);
 	}
-	if (command  ===  "globalchat") {
-let xoargs = message.content.split(" ").slice(1);
-    let xo03 = xoargs.join(" ")
-    var xo02 = message.guild.channels.find('name', 'dans-ta-pub');
-    if (!xo02) return message.reply(`Le salon inter-trak n'existe pas créer le salon ferais marcher la commande`)
-    if (message.channel.name !== 'dans-ta-pub') return message.reply('La commande ne peut être fait que sur le salon inter-trak')
-                if (!xo03) return message.reply("Ecrivez un message")
-                    message.delete();
-                    var tchat_embed = new Discord.RichEmbed()
-                        .setColor("#00ffff")
-                        .setTitle("Chat Global")
-                        .setThumbnail(`${message.author.displayAvatarURL}`)
-                        .addField("Nom d'utilisateur :", message.author.username + "#" + message.author.discriminator, true)
-                        .addField("Du serveur", message.guild.name, true)
-                        .addField("Message :", "**-----------------------------------------------------------**")
-                        .addField(`${xo03}`, `**------------------------------------------------------------**`)
-                        .setTimestamp()
-                    bot.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(tchat_embed))
-}
   });
 client.login(process.env.BOT_TOKEN);
