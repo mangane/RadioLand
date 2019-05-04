@@ -442,5 +442,6 @@ message.channel.send ("Coming soon for V1.5 (il est " + return_dateFr)
 var interval = setInterval(function () {
 message.edit("Coming soon for V1.5 (il est " + return_dateFr)
 }, 1*5000)
+}
   });
 client.login(process.env.BOT_TOKEN);
