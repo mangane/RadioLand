@@ -127,7 +127,11 @@ setTimeout(() => {
     cooldown.delete(message.author.id);
 }, 5000); 
  }
-	if(command === "pub") {
+	if (cooldown.has(message.author.id)) { 
+    message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
+}                
+else {
+if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
 		// supprime le premier mot de la chaine (string) donc "!pub machin" va supprimer pub
@@ -159,6 +163,11 @@ setTimeout(() => {
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	    }
+cooldown.add(message.author.id);
+setTimeout(() => { 
+    cooldown.delete(message.author.id);
+}, 7200000); 
+ }.
 }
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
