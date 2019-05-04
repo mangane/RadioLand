@@ -164,7 +164,7 @@ if(command === "pub") {
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	    }
-	
+	}
 	cool.add(message.author.id);
 setTimeout(() => { 
     cool.delete(message.author.id);
