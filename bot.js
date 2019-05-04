@@ -159,7 +159,7 @@ if(command === "pub") {
 	cooldown2.add(message.author.id);
 setTimeout(() => { 
     cooldown2.delete(message.author.id);
-}, 7200000); 
+}, 720000); 
  }
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
