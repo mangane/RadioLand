@@ -119,8 +119,6 @@ if(command === "stats") {
 		message.channel.send({embed})
 }
 	if(cooldown.has(message.author.id)) { 
-    message.channel.send("je vous rappel que vous devez patienter 2 heures avant de postez une nouvelles pub !");
-} else {
 if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
@@ -151,7 +149,7 @@ if(command === "pub") {
 	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub")
 } else {
-if (message.content.startsWith(prefix + "pub")) { // Vérification. Est-ce que le membre est dans le cooldown.
+if (command === "pub") { // Vérification. Est-ce que le membre est dans le cooldown.
     message.channel.send("⚠️ Le cooldown est activé pendant 2h ! ");
     }
 }
