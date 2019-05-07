@@ -148,7 +148,7 @@ if(command === "pub") {
 		// envoie au channel distant par l'id
 		//const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
 	    //if(channel) { // Check if that channel exists
-	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed);
+	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed));
 } else { // Vérification. Est-ce que le membre est dans le cooldown.
 cooldown.add(message.author.id);
 setTimeout(() => { 
