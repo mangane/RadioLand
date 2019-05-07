@@ -150,7 +150,6 @@ if(command === "pub") {
 } else { // Vérification. Est-ce que le membre est dans le cooldown.
     message.channel.send("⚠️ Le cooldown est activé pendant 2h ! ");
     }
-}
 cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id); 
