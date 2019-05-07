@@ -147,7 +147,7 @@ if(command === "pub") {
 		//const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
 	    //if(channel) { // Check if that channel exists
 	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
-		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub")
+		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
 } else {
 if (command === "pub") { // Vérification. Est-ce que le membre est dans le cooldown.
     message.channel.send("⚠️ Le cooldown est activé pendant 2h ! ");
