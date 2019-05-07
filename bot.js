@@ -349,9 +349,8 @@ if(command === "pub") {
 	    } else {
 		    
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
-	cooldown.add(message.author.id);
-		    message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
-}                
+} else {
+		    cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id);
 }, 720000); 
