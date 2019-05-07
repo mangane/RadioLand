@@ -118,10 +118,9 @@ if(command === "stats") {
 		.addField("Nombre d'utilisateurs :", client.users.size);
 		message.channel.send({embed})
 }
-	if (cooldown.has(message.author.id)) { 
+	if(cooldown.has(message.author.id)) { 
     message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
-}                
-else {
+} else {
 if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
