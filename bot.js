@@ -149,11 +149,7 @@ if(command === "pub") {
 		//const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
 	    //if(channel) { // Check if that channel exists
 	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
-		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
-	    } else {
-	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
-	    
-	
+		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub")
 	cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id);
