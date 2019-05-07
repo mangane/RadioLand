@@ -148,7 +148,7 @@ if(command === "pub") {
 	    //if(channel) { // Check if that channel exists
 	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
 } else {
-if (command === "pub") { // Vérification. Est-ce que le membre est dans le cooldown.
+if(command === "pub") { // Vérification. Est-ce que le membre est dans le cooldown.
     message.channel.send("⚠️ Le cooldown est activé pendant 2h ! ");
     }
 }
