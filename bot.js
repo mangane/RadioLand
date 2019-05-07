@@ -434,6 +434,8 @@ message.channel.send ({embed})
 	.then(console.log)
 	.catch(console.error);
 	}
-	
+	if(command === "test") {
+		message.channel.send("<a:bye:569489385746202634>");
+	}
   });
 client.login(process.env.BOT_TOKEN);
