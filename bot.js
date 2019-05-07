@@ -156,7 +156,6 @@ cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id); 
 }, 720000);
-		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
  }
 
 	if (command === "help") {
