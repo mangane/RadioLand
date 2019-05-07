@@ -151,11 +151,16 @@ if(command === "pub") {
 	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub")
 } else {
-	cooldown.add(message.author.id);
-setTimeout(() => { 
-    cooldown.delete(message.author.id);
-}, 720000); 
+	else {
+if (message.content.startsWith(prefix + "pub")) { // Vérification. Est-ce que le membre est dans le cooldown.
+    message.channel.send("⚠️ Le cooldown est activé pendant 2h ! ");
+    }
 }
+cooldown.add(message.author.id);
+setTimeout(() => { 
+    cooldown.delete(message.author.id); 
+}, 720000);
+ }
 
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
