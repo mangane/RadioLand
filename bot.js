@@ -201,14 +201,14 @@ const embed = new Discord.RichEmbed()
 .setDescription("Prefix .")
 .addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite\\user-info\\dons\\support\\help-bvn``")
 .addField ("Commande modération :","``kick\\ban\\purge``")
-.addField ("Commande Fun :","``fume\\slap\\spam``");
+.addField ("Commande Fun :","``slap``");
 message.channel.send ({embed})
 }
 	if(command === "invite") {
 message.delete ()
 const embed = new Discord.RichEmbed  ()
 .setTitle("Voici l'invitation pour m'ajouter à votre serveur")
-.setDescription("Pour m'ajouter à votre serveur cliquer [ici](https://discordapp.com/api/oauth2/authorize?client_id=570251638221307914&permissions=8&scope=bot)")
+.setDescription("[Pour m'ajouter à votre serveur cliquer ici](https://discordapp.com/api/oauth2/authorize?client_id=570251638221307914&permissions=8&scope=bot)")
 .setFooter ("Crée par ⏳Gaétan");
 message.channel.send ({embed})
 }
@@ -261,54 +261,6 @@ const embed = new Discord.RichEmbed  ()
 .setDescription("Nous avons simplifier au maximum les messages de bienvenue, il vous suffit de crée un salon nommer\``départ-arrivé`` !!!\n Bonne continuation\n__Le staff de DanPub__");
 message.channel.send ({embed })
 }
-	if (command === "fume") {
-  message.delete()
-
-    message.channel.send('*Je vais aller fumer*').then(async msg => {
-        setTimeout(() => {
-            msg.edit('🚬');
-        }, 1000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁ ');
-        }, 2000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁☁ ');
-        }, 3000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁☁☁ ');
-        }, 4000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁☁');
-        }, 5000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁');
-        }, 6000);
-        setTimeout(() => {
-            msg.edit('🚬');
-        }, 7000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁ ');
-        }, 9000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁☁ ');
-        }, 10000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁☁☁ ');
-        }, 11000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁☁');
-        }, 12000);
-        setTimeout(() => {
-            msg.edit('🚬 ☁');
-        }, 13000);
-          setTimeout(() => {
-            msg.edit('🚬');
-        }, 14000);
-        setTimeout(() => {
-            msg.edit(`*J'ai fini de fumer*`);
-        }, 15000);
-    });
-    };
  if (command === "slap") {
 message.delete ()
 if(message.mentions.users.size === 0)
@@ -327,40 +279,7 @@ setTimeout(() => {
  });
     
  };
-	if (command === "spam") {
-message.delete ()
-message.channel.send (` Téléchargement du fichier spam en cours 🚨🚧🚨`).then(async msg => {
-        setTimeout(() => {
-            msg.edit(`Téléchargement du fichier spam terminer, commençons le spam 🚨🚧🚨`);
-        }, 3000);
-setTimeout(() => {
-            msg.edit(`SPAM`);
-        }, 4000);
-setTimeout(() => {
-            msg.edit(`SPAM SPAM SPAM`);
-        }, 5000);
-	setTimeout(() => {
-            msg.edit(`SPAM SPAM SPAM SPAM`);
-        }, 6000);
-	setTimeout(() => {
-            msg.edit(`SPAM SPAM SPAM SPAM SPAM`);
-        }, 5000);
-	setTimeout(() => {
-            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM`);
-        }, 7000);
-	setTimeout(() => {
-            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM `);
-        }, 7000);
-	setTimeout(() => {
-            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM `);
-        }, 7000);
-	setTimeout(() => {
-            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM `).then(message => {message.delete(20000)});
-        }, 7000);
 	
- });
-    
- };
 	
   if(command === "naissance-add") {
 		message.delete()
