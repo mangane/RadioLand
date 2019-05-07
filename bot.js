@@ -119,6 +119,8 @@ if(command === "stats") {
 		message.channel.send({embed})
 }
 	if(cooldown.has(message.author.id)) { 
+		message.channel.send("⚠️ Le cooldown est activé pendant 2h ! ");
+    } else {
 if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
@@ -148,8 +150,6 @@ if(command === "pub") {
 	    //if(channel) { // Check if that channel exists
 	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
 } else { // Vérification. Est-ce que le membre est dans le cooldown.
-    message.channel.send("⚠️ Le cooldown est activé pendant 2h ! ");
-    }
 cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id); 
