@@ -150,12 +150,14 @@ if(command === "pub") {
 	    //if(channel) { // Check if that channel exists
 	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub")
+}
+}
 	cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id);
 }, 720000); 
 }
-}
+
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
