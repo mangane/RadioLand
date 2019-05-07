@@ -119,7 +119,7 @@ if(command === "stats") {
 		message.channel.send({embed})
 }
 	if(cooldown.has(message.author.id)) { 
-    message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
+    message.channel.send("je vous rappel que vous devez patienter 2 heures avant de postez une nouvelles pub !");
 } else {
 if(command === "pub") {
 		message.delete()
