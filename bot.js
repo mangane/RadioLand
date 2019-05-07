@@ -357,6 +357,5 @@ if(command === "pub") {
 setTimeout(() => { 
     cooldown.delete(message.author.id);
 }, 720000); 
- }
   });
 client.login(process.env.BOT_TOKEN);
