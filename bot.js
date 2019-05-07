@@ -317,9 +317,6 @@ message.channel.send ({embed})
 		message.channel.send("<a:bye:569489385746202634>");
 	}
 	if (cooldown.has(message.author.id)) { 
-    message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
-}                
-else {
 if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
@@ -350,8 +347,11 @@ if(command === "pub") {
 	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
 	    } else {
+		    
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
 	cooldown.add(message.author.id);
+		    message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
+}                
 setTimeout(() => { 
     cooldown.delete(message.author.id);
 }, 720000); 
