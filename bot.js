@@ -109,6 +109,48 @@ client.on("message", async message => {
 		message.delete();
 		message.reply(`Nous sommes ${message.guild.memberCount} Sur ${message.guild.name}`).then(message => {message.delete(5000)});
 	}
+	if (cooldown.has(message.author.id)) { 
+    message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
+}                
+else {
+if(command === "pub") {
+		message.delete()
+		var amsg = message.content;
+		// supprime le premier mot de la chaine (string) donc "!pub machin" va supprimer pub
+		var msg = amsg.substr(amsg.indexOf(" ") + 1);
+		console.log(msg);
+		console.log(typeof msg);
+		// Donne le nombre de caractères dans la chaine
+		console.log(msg + ' ' + msg.length);
+		// ici c'est length pas size inférieur ou égal
+		if(msg.length <= 30) {
+			console.log("Votre publicité doit contenir plus de 30 caractère");
+			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
+		}
+		var reason = msg;
+		var test = message.guild.channels.find(`name`, "dans-ta-pub");
+		console.log(test);
+		const embed = new Discord.RichEmbed()
+		.setColor("RANDOM")
+		.setTitle("Publicité")
+		.addField("Publicité de :", `${message.author}`)
+		.addField("Publicité :", reason);
+		// envoie au channel courant
+		//message.channel.send({embed})
+		// envoie au channel distant par l'id
+		const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
+	    if(channel) { // Check if that channel exists
+	        channel.send({embed})
+		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
+	    } else {
+	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
+	    }
+	
+cooldown.add(message.author.id);
+setTimeout(() => { 
+    cooldown.delete(message.author.id);
+}, 7200000); 
+}
 if(command === "stats") {
 		message.delete()
 		const embed = new Discord.RichEmbed()
@@ -316,47 +358,5 @@ message.channel.send ({embed})
 	if(command === "test") {
 		message.channel.send("<a:bye:569489385746202634>");
 	}
-	if (cooldown.has(message.author.id)) { 
-    message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
-}                
-else {
-if(command === "pub") {
-		message.delete()
-		var amsg = message.content;
-		// supprime le premier mot de la chaine (string) donc "!pub machin" va supprimer pub
-		var msg = amsg.substr(amsg.indexOf(" ") + 1);
-		console.log(msg);
-		console.log(typeof msg);
-		// Donne le nombre de caractères dans la chaine
-		console.log(msg + ' ' + msg.length);
-		// ici c'est length pas size inférieur ou égal
-		if(msg.length <= 30) {
-			console.log("Votre publicité doit contenir plus de 30 caractère");
-			return message.channel.send ("Votre publicité doit contenir plus de 30 caractère");	
-		}
-		var reason = msg;
-		var test = message.guild.channels.find(`name`, "dans-ta-pub");
-		console.log(test);
-		const embed = new Discord.RichEmbed()
-		.setColor("RANDOM")
-		.setTitle("Publicité")
-		.addField("Publicité de :", `${message.author}`)
-		.addField("Publicité :", reason);
-		// envoie au channel courant
-		//message.channel.send({embed})
-		// envoie au channel distant par l'id
-		const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
-	    if(channel) { // Check if that channel exists
-	        channel.send({embed})
-		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
-	    } else {
-	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
-	    }
-	
-cooldown.add(message.author.id);
-setTimeout(() => { 
-    cooldown.delete(message.author.id);
-}, 7200000); 
-}
   });
 client.login(process.env.BOT_TOKEN);
