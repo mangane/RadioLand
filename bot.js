@@ -345,17 +345,18 @@ if(command === "pub") {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		//const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
-	    //if(channel) { // Check if that channel exists
-	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
+		const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
+	    if(channel) { // Check if that channel exists
+	        channel.send({embed})
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
-	}
-	cooldown.add(message.author.id);
+	    }
+	
+cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id);
-}, 720000); 
+}, 7200000); 
 }
   });
 client.login(process.env.BOT_TOKEN);
