@@ -152,12 +152,12 @@ if(command === "pub") {
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
+	    } else {
 	cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id);
 }, 720000); 
  }
-	}
 	
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
