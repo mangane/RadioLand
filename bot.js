@@ -120,6 +120,8 @@ if(command === "stats") {
 }
 	if (cooldown.has(message.author.id)) { 
 		 message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !")
+	} else {
+		
 if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
