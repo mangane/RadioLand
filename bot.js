@@ -109,9 +109,19 @@ client.on("message", async message => {
 		message.delete();
 		message.reply(`Nous sommes ${message.guild.memberCount} Sur ${message.guild.name}`).then(message => {message.delete(5000)});
 	}
+if(command === "stats") {
+		message.delete()
+		const embed = new Discord.RichEmbed()
+		.setColor("RANDOM")
+		.setTitle("Statistiques")
+		.addField("Nombre de serveur :", client.guilds.size)
+		.addField("Nombre d'utilisateurs :", client.users.size);
+		message.channel.send({embed})
+}
 	if (cooldown.has(message.author.id)) { 
     message.channel.send("Merci de patientez 2 heures avant de postez une nouvelles pub !");
-} else {
+}                
+else {
 if(command === "pub") {
 		message.delete()
 		var amsg = message.content;
@@ -137,26 +147,19 @@ if(command === "pub") {
 		// envoie au channel courant
 		//message.channel.send({embed})
 		// envoie au channel distant par l'id
-		const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
-	    if(channel) { // Check if that channel exists
-	        channel.send({embed})
+		//const channel = message.guild.channels.find(`name`,"dans-ta-pub");// Find the channel ID "123456789"
+	    //if(channel) { // Check if that channel exists
+	        client.channels.findAll('name', 'dans-ta-pub').map(channel => channel.send(embed))
 		    message.channel.send ("Votre publicité à été envoyer avec succès sur #dans-ta-pub");
 	    } else {
 	        message.channel.send("je ne trouve pas le salon de dans-ta-pub, contacter un administrateur! ");
-cooldown.add(message.author.id);
+	    }
+	}
+	cooldown.add(message.author.id);
 setTimeout(() => { 
     cooldown.delete(message.author.id);
-}, 7200000); 
-}
-if(command === "stats") {
-		message.delete()
-		const embed = new Discord.RichEmbed()
-		.setColor("RANDOM")
-		.setTitle("Statistiques")
-		.addField("Nombre de serveur :", client.guilds.size)
-		.addField("Nombre d'utilisateurs :", client.users.size);
-		message.channel.send({embed})
-}
+}, 720000); 
+ }
 	if (command === "help") {
 const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
@@ -200,14 +203,14 @@ const embed = new Discord.RichEmbed()
 .setDescription("Prefix .")
 .addField ("Commande universel :","``help\\help-pub\\stats\\count\\invite\\user-info\\dons\\support\\help-bvn``")
 .addField ("Commande modération :","``kick\\ban\\purge``")
-.addField ("Commande Fun :","``slap``");
+.addField ("Commande Fun :","``fume\\slap\\spam``");
 message.channel.send ({embed})
 }
 	if(command === "invite") {
 message.delete ()
 const embed = new Discord.RichEmbed  ()
 .setTitle("Voici l'invitation pour m'ajouter à votre serveur")
-.setDescription("[Pour m'ajouter à votre serveur cliquer ici](https://discordapp.com/api/oauth2/authorize?client_id=570251638221307914&permissions=8&scope=bot)")
+.setDescription("Pour m'ajouter à votre serveur cliquer [ici](https://discordapp.com/api/oauth2/authorize?client_id=570251638221307914&permissions=8&scope=bot)")
 .setFooter ("Crée par ⏳Gaétan");
 message.channel.send ({embed})
 }
@@ -260,6 +263,54 @@ const embed = new Discord.RichEmbed  ()
 .setDescription("Nous avons simplifier au maximum les messages de bienvenue, il vous suffit de crée un salon nommer\``départ-arrivé`` !!!\n Bonne continuation\n__Le staff de DanPub__");
 message.channel.send ({embed })
 }
+	if (command === "fume") {
+  message.delete()
+
+    message.channel.send('*Je vais aller fumer*').then(async msg => {
+        setTimeout(() => {
+            msg.edit('🚬');
+        }, 1000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁ ');
+        }, 2000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁ ');
+        }, 3000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁☁ ');
+        }, 4000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁');
+        }, 5000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁');
+        }, 6000);
+        setTimeout(() => {
+            msg.edit('🚬');
+        }, 7000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁ ');
+        }, 9000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁ ');
+        }, 10000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁☁ ');
+        }, 11000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁');
+        }, 12000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁');
+        }, 13000);
+          setTimeout(() => {
+            msg.edit('🚬');
+        }, 14000);
+        setTimeout(() => {
+            msg.edit(`*J'ai fini de fumer*`);
+        }, 15000);
+    });
+    };
  if (command === "slap") {
 message.delete ()
 if(message.mentions.users.size === 0)
@@ -278,7 +329,40 @@ setTimeout(() => {
  });
     
  };
+	if (command === "spam") {
+message.delete ()
+message.channel.send (` Téléchargement du fichier spam en cours 🚨🚧🚨`).then(async msg => {
+        setTimeout(() => {
+            msg.edit(`Téléchargement du fichier spam terminer, commençons le spam 🚨🚧🚨`);
+        }, 3000);
+setTimeout(() => {
+            msg.edit(`SPAM`);
+        }, 4000);
+setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM`);
+        }, 5000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM`);
+        }, 6000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM`);
+        }, 5000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM`);
+        }, 7000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM `);
+        }, 7000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM `);
+        }, 7000);
+	setTimeout(() => {
+            msg.edit(`SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM `).then(message => {message.delete(20000)});
+        }, 7000);
 	
+ });
+    
+ };
 	
   if(command === "naissance-add") {
 		message.delete()
@@ -352,8 +436,6 @@ message.channel.send ({embed})
 	.then(console.log)
 	.catch(console.error);
 	}
-	if(command === "test") {
-		message.channel.send("<a:bye:569489385746202634>");
-	}
+	
   });
 client.login(process.env.BOT_TOKEN);
